@@ -18,6 +18,8 @@
     #Searching
     f = "!git ls-files | grep -i"
     
+    #Add & Commit
+    add-commit = "!git add -A && git commit"
 
     #Comparisons
     diff = diff --word-diff
