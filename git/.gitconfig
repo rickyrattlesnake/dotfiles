@@ -1,10 +1,39 @@
-[user]
-    name = rickyr
-    email = ricky.ratnayake@ir.com
 [alias]
-    l = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+    #Base Commands
     s = status
     co = checkout
     br = branch
+    ci = commit
+
+    #Listing
     last = log -1 HEAD
-    unstage = reset HEAD --
+    ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate    s = status
+    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+    lnc = log --pretty=format:"%h\\ %s\\ [%cn]"
+    ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+    lalias = "!git config -l | grep alias | cut -c 7-"
+    fl = log -u
+    lt = describe --tags --abbrev=0
+    
+    #Searching
+    f = "!git ls-files | grep -i"
+    
+
+    #Comparisons
+    diff = diff --word-diff
+    dc = diff --cached
+
+    #Reset
+    r = reset
+    r1 = reset HEAD^
+    r2 = reset HEAD^^
+    rh = reset --hard
+    rh1 = reset HEAD^ --hard
+    rh2 = reset HEAD^^ --hard
+    
+    #Stash
+    sls = stash list
+    sap = stash apply
+    ssv = stash save
+[core]
+    autocrlf = input
