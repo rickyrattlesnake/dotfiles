@@ -39,3 +39,7 @@
     ssv = stash save
 [core]
     autocrlf = input
+[push]
+    default = simple
+[branch]
+    autosetuprebase = always
