@@ -6,20 +6,16 @@
     ci = commit
 
     #Listing
-    last = log -1 HEAD
     ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate    s = status
     ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
     lnc = log --pretty=format:"%h\\ %s\\ [%cn]"
     ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
     lalias = "!git config -l | grep alias | cut -c 7-"
-    fl = log -u
+    lf = log -u
     lt = describe --tags --abbrev=0
     
-    #Searching
-    f = "!git ls-files | grep -i"
-    
-    #Add & Commit
-    add-commit = "!git add -A && git commit"
+    #Working Directory & Staging
+    a-c = "!git add -A && git commit"
 
     #Comparisons
     diff = diff --word-diff
@@ -34,8 +30,15 @@
     rh2 = reset HEAD^^ --hard
     
     #Stash
-    sls = stash list
-    sap = stash apply
-    ssv = stash save
+    sh = stash -u
+    sh-l = stash list
+    sh-a = stash apply
+    sh-p = stash pop
+    sh-s = stash save
+    sh-c = stash clear
+
+    #Remote Server Interactions
+    rmt-ls = remote -v
+
 [core]
     autocrlf = input
