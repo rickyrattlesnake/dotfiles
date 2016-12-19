@@ -6,13 +6,14 @@
     ci = commit
 
     #Listing
-    ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate    s = status
+    ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
     ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
     lnc = log --pretty=format:"%h\\ %s\\ [%cn]"
     ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
     lalias = "!git config -l | grep alias | cut -c 7-"
     lf = log -u
     lt = describe --tags --abbrev=0
+    tree = log --graph --decorate --pretty=oneline --abbrev-commit
     
     #Working Directory & Staging
     a-c = "!git add -A && git commit"
@@ -42,3 +43,7 @@
 
 [core]
     autocrlf = input
+[push]
+    default = simple
+[branch]
+    autosetuprebase = never
