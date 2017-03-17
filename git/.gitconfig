@@ -2,7 +2,7 @@
     #Base Commands
     s = status
     co = checkout
-    br = branch
+    br = branch -a -vv
     ci = commit
 
     #Listing
@@ -18,9 +18,12 @@
     #Working Directory & Staging
     a-c = "!git add -A && git commit"
 
+    #Fetching
+    fetchall = fetch --all -p
+
     #Comparisons
     diff = diff --word-diff
-    dc = diff --cached
+    dd = difftool --dir-diff --no-prompt
 
     #Reset
     r = reset
@@ -47,3 +50,15 @@
     default = simple
 [branch]
     autosetuprebase = never
+[url "https://"]
+    insteadOf = git://
+[diff]
+    tool = bc
+[difftool "bc3"]
+    path = C:/Program Files/Beyond Compare 4/bcomp.exe
+[difftool "bc"]
+    path = C:/Program Files/Beyond Compare 4/bcomp.exe
+[merge]
+    tool = bc
+[mergetool "bc"]
+    path = C:/Program Files/Beyond Compare 4/bcomp.exe
