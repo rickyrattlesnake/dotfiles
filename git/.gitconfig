@@ -47,16 +47,23 @@
     #Remote Server Interactions
     rmt-ls = remote -v
 
+
+
+
 [core]
     autocrlf = input
+    whitespace = trailing-space,space-before-tab
 [push]
-    default = simple
+    default = upstream
 [branch]
-    autosetuprebase = never
+    autosetupmerge = true
+
 [url "https://"]
     insteadOf = git://
 [diff]
     tool = bc
+    renames = copies
+    mnemonicprefix = true
 [difftool "bc3"]
     path = C:/Program Files/Beyond Compare 4/bcomp.exe
 [difftool "bc"]
@@ -66,3 +73,6 @@
 [mergetool "bc"]
     path = C:/Program Files/Beyond Compare 4/bcomp.exe
     keepBackup = false
+[advice]
+    statusHints = false
+    pushNonFastForward = false
