@@ -18,6 +18,9 @@
     #Working Directory & Staging
     a-c = "!git add -A && git commit"
 
+    #Branch Management
+    del-br = "git branch | grep -v "master" | xargs git branch -D"
+
     #Fetching
     fetchall = fetch --all -p
 
@@ -62,3 +65,4 @@
     tool = bc
 [mergetool "bc"]
     path = C:/Program Files/Beyond Compare 4/bcomp.exe
+    keepBackup = false
