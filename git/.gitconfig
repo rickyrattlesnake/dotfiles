@@ -2,7 +2,7 @@
     #Base Commands
     s = status
     co = checkout
-    br = branch -a -vv
+    br = branch -a -v
     ci = commit
 
     #Listing
@@ -76,3 +76,6 @@
 [advice]
     statusHints = false
     pushNonFastForward = false
+[user]
+	email = ricky.ratnayake@gmail.com
+	name = rickyrattlesnake
