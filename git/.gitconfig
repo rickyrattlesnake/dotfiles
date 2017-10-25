@@ -14,7 +14,7 @@
     lf = log -u
     lt = describe --tags --abbrev=0
     tree = log --graph --decorate --pretty=oneline --abbrev-commit
-    
+
     #Working Directory & Staging
     a-c = "!git add -A && git commit"
 
@@ -35,7 +35,7 @@
     rh = reset --hard
     rh1 = reset HEAD^ --hard
     rh2 = reset HEAD^^ --hard
-    
+
     #Stash
     sh = stash -u
     sh-l = stash list
@@ -46,13 +46,10 @@
 
     #Remote Server Interactions
     rmt-ls = remote -v
-
-
-
-
 [core]
-    autocrlf = input
-    whitespace = trailing-space,space-before-tab
+	symlinks = false
+	autocrlf = true
+	fscache = true
 [push]
     default = upstream
 [branch]
@@ -61,16 +58,16 @@
 [url "https://"]
     insteadOf = git://
 [diff]
-    tool = bc
+    tool = meld
     renames = copies
     mnemonicprefix = true
-[difftool "bc3"]
+[difftool "meld"]
     path = C:/Program Files/Beyond Compare 4/bcomp.exe
-[difftool "bc"]
+[difftool "meld"]
     path = C:/Program Files/Beyond Compare 4/bcomp.exe
 [merge]
-    tool = bc
-[mergetool "bc"]
+    tool = meld
+[mergetool "meld"]
     path = C:/Program Files/Beyond Compare 4/bcomp.exe
     keepBackup = false
 [advice]
@@ -79,3 +76,10 @@
 [user]
 	email = ricky.ratnayake@gmail.com
 	name = rickyrattlesnake
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = true
+[help]
+	format = html
