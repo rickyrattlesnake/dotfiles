@@ -75,3 +75,5 @@
 [user]
 	email = ricky.ratnayake@gmail.com
 	name = rickyrattlesnake
+[credential]
+	helper = cache
