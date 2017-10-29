@@ -14,7 +14,7 @@
     lf = log -u
     lt = describe --tags --abbrev=0
     tree = log --graph --decorate --pretty=oneline --abbrev-commit
-    
+
     #Working Directory & Staging
     a-c = "!git add -A && git commit"
 
@@ -26,7 +26,7 @@
 
     #Comparisons
     diff = diff --word-diff
-    dd = difftool --dir-diff --no-prompt
+    dd = difftool --cached --dir-diff --no-prompt
 
     #Reset
     r = reset
@@ -35,7 +35,7 @@
     rh = reset --hard
     rh1 = reset HEAD^ --hard
     rh2 = reset HEAD^^ --hard
-    
+
     #Stash
     sh = stash -u
     sh-l = stash list
@@ -46,9 +46,6 @@
 
     #Remote Server Interactions
     rmt-ls = remote -v
-
-
-
 
 [core]
     autocrlf = input
@@ -61,17 +58,16 @@
 [url "https://"]
     insteadOf = git://
 [diff]
-    tool = bc
+    tool = meld
     renames = copies
     mnemonicprefix = true
-[difftool "bc3"]
-    path = C:/Program Files/Beyond Compare 4/bcomp.exe
-[difftool "bc"]
-    path = C:/Program Files/Beyond Compare 4/bcomp.exe
+    prompt = false
+[difftool "meld"]
+    path = /usr/bin/meld
 [merge]
-    tool = bc
-[mergetool "bc"]
-    path = C:/Program Files/Beyond Compare 4/bcomp.exe
+    tool = meld
+[mergetool "meld"]
+    path = /usr/bin/meld
     keepBackup = false
 [advice]
     statusHints = false

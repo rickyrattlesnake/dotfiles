@@ -1,6 +1,6 @@
 export DOT_PATH=$HOME/.cfg
 export ZSH_ANTIGEN=$DOT_PATH/tools/antigen/antigen.zsh
-export GIT_CONFIG=$DOT_PATH/git/.gitconfig
+GIT_CONFIG=$DOT_PATH/git/.gitconfig
 
 ln -fs $GIT_CONFIG $HOME/.gitconfig
 
