@@ -1,11 +1,9 @@
 [alias]
-    #Base Commands
     s = status
     co = checkout
     br = branch -a -v
     ci = commit
 
-    #Listing
     ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
     ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
     lnc = log --pretty=format:"%h\\ %s\\ [%cn]"
@@ -15,71 +13,47 @@
     lt = describe --tags --abbrev=0
     tree = log --graph --decorate --pretty=oneline --abbrev-commit
 
-    #Working Directory & Staging
-    a-c = "!git add -A && git commit"
+    ac = "!git add -A && git commit"
 
-    #Branch Management
-    del-br = "git branch | grep -v "master" | xargs git branch -D"
+    delete-branches = "git branch | grep -v "master" | xargs git branch -D"
+    fetch-all = fetch --all -p
 
-    #Fetching
-    fetchall = fetch --all -p
-
-    #Comparisons
     diff = diff --word-diff
-    dd = difftool --dir-diff --no-prompt
+    dd = difftool --dir-diff --cached
 
-    #Reset
-    r = reset
-    r1 = reset HEAD^
-    r2 = reset HEAD^^
-    rh = reset --hard
-    rh1 = reset HEAD^ --hard
-    rh2 = reset HEAD^^ --hard
-
-    #Stash
-    sh = stash -u
-    sh-l = stash list
-    sh-a = stash apply
-    sh-p = stash pop
-    sh-s = stash save
-    sh-c = stash clear
-
-    #Remote Server Interactions
-    rmt-ls = remote -v
 [core]
-	symlinks = false
-	autocrlf = true
-	fscache = true
+    symlinks = false
+    autocrlf = true
+    fscache = true
 [push]
     default = upstream
 [branch]
     autosetupmerge = true
-
 [url "https://"]
     insteadOf = git://
 [diff]
     tool = meld
     renames = copies
     mnemonicprefix = true
+[difftool]
+    prompt = false
 [difftool "meld"]
-    path = C:/Program Files/Beyond Compare 4/bcomp.exe
-[difftool "meld"]
-    path = C:/Program Files/Beyond Compare 4/bcomp.exe
+    cmd = meld "$LOCAL" "$REMOTE"
 [merge]
     tool = meld
 [mergetool "meld"]
-    path = C:/Program Files/Beyond Compare 4/bcomp.exe
+    cmd = meld "$LOCAL" "$BASE" "$REMOTE" --output "$MERGED"
     keepBackup = false
 [advice]
     statusHints = false
     pushNonFastForward = false
 [user]
-	email = ricky.ratnayake@gmail.com
-	name = rickyrattlesnake
+    email = ricky.ratnayake@gmail.com
+    name = rickyrattlesnake
 [color]
-	diff = auto
-	status = auto
-	branch = auto
-	interactive = true
+    diff = auto
+    status = auto
+    branch = auto
+    interactive = true
 [help]
-	format = html
+    format = html
