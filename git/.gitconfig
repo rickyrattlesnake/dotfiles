@@ -23,7 +23,7 @@
 
 [core]
     symlinks = false
-    autocrlf = true
+    autocrlf = input
     fscache = true
 [push]
     default = upstream
