@@ -1,0 +1,41 @@
+###############################
+## Key Bindings ###############
+bindkey -e
+
+declare -g -A keys
+
+keys[Home]="$terminfo[khome]"
+keys[End]="$terminfo[kend]"
+keys[Insert]="$terminfo[kich1]"
+keys[Backspace]="$terminfo[kbs]"
+keys[Delete]="$terminfo[kdch1]"
+keys[Up]="$terminfo[kcuu1]"
+keys[Down]="$terminfo[kcud1]"
+keys[Left]="$terminfo[kcub1]"
+keys[Right]="$terminfo[kcuf1]"
+keys[PageUp]="$terminfo[kpp]"
+keys[PageDown]="$terminfo[knp]"
+
+# setup keys accordingly
+[[ -n "$keys[Home]"      ]] && bindkey -- "$keys[Home]"      beginning-of-line
+[[ -n "$keys[End]"       ]] && bindkey -- "$keys[End]"       end-of-line
+[[ -n "$keys[Insert]"    ]] && bindkey -- "$keys[Insert]"    overwrite-mode
+[[ -n "$keys[Backspace]" ]] && bindkey -- "$keys[Backspace]" backward-delete-char
+[[ -n "$keys[Delete]"    ]] && bindkey -- "$keys[Delete]"    delete-char
+[[ -n "$keys[Up]"        ]] && bindkey -- "$keys[Up]"        up-line-or-history
+[[ -n "$keys[Down]"      ]] && bindkey -- "$keys[Down]"      down-line-or-history
+[[ -n "$keys[Left]"      ]] && bindkey -- "$keys[Left]"      backward-char
+[[ -n "$keys[Right]"     ]] && bindkey -- "$keys[Right]"     forward-char
+
+if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
+  function zle-line-init () {
+    echoti smkx
+  }
+  function zle-line-finish () {
+    echoti rmkx
+  }
+  zle -N zle-line-init
+  zle -N zle-line-finish
+fi
+
+###############################

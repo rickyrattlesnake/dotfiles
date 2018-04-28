@@ -1,22 +1,36 @@
-export DOT_PATH=$HOME/.cfg
-export ZSH_ANTIGEN=$DOT_PATH/tools/antigen/antigen.zsh
-export GIT_CONFIG=$DOT_PATH/git/.gitconfig
+######################
+## ZSH THEME CONFIG ##
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_DISABLE_RPROMPT=true
 
-ln -fs $GIT_CONFIG $HOME/.gitconfig
+######################
 
-source $ZSH_ANTIGEN
+source ~/.zshrc.keybinding
 
-# Load the oh-my-zsh's library.
-antigen use oh-my-zsh
+setopt appendhistory autocd
+zstyle :compinstall filename '/home/rattlesnake/.zshrc'
 
-# Bundles from the default repo (robbyrussell's oh-my-zsh).
-antigen bundle git
+autoload -Uz compinit
+compinit
 
-# Syntax highlighting bundle.
-antigen bundle zsh-users/zsh-syntax-highlighting
+[[ $- != *i* ]] && return
 
-# Load the theme.
-antigen theme robbyrussell/oh-my-zsh themes/agnoster
 
-# Tell Antigen that you're done.
-antigen apply
+#######################
+## Aliases ############
+
+alias ls='ls --color=auto'
+alias code='code-oss'
+#######################
+
+BROWSER=/usr/bin/chromium
+EDITOR=/usr/bin/nano
+
+## zplug START
+zplugInitPath=$(pacman -Ql zplug | grep -i "zplug/init.zsh" | sed -E "s/zplug //")
+source $zplugInitPath
+
+zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
+
+zplug load
+## zplug END
