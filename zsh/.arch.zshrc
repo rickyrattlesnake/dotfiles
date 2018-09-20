@@ -21,6 +21,7 @@ compinit
 
 alias ls='ls --color=auto'
 alias code='code-oss'
+
 #######################
 
 BROWSER=/usr/bin/chromium
