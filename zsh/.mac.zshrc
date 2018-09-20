@@ -1,5 +1,10 @@
+##### setup
+export PATH=/usr/local/bin:$PATH
+#####
+
 ######################
 ## ZSH THEME CONFIG ##
+POWERLEVEL9K_MODE='nerdfont-complete'
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_DISABLE_RPROMPT=true
 
@@ -18,16 +23,13 @@ source ~/.zshrc.alias
 BROWSER=/usr/bin/chromium
 EDITOR=/usr/bin/nano
 
-# ## zplug START
-# zplugInitPath=$(pacman -Ql zplug | grep -i "zplug/init.zsh" | sed -E "s/zplug //")
-# source $zplugInitPath
+######## zplug ##############
+zplugInitPath=$(brew --prefix zplug)/init.zsh
+source $zplugInitPath
 
-# zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
+zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
 
-# zplug load
-## zplug END
-
-
+zplug load
 ######## nvm ##############
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh

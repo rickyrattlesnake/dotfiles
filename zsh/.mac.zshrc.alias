@@ -1,6 +1,7 @@
 #######################
 ## Aliases ############
 
-alias ls='ls --color=auto'
-alias code='code-oss'
+alias ls='ls -G'
+alias ll='ls -al'
+
 #######################ß

@@ -1,0 +1,59 @@
+[alias]
+    s = status
+    co = checkout
+    br = branch -a -v
+    ci = commit
+
+    ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+    lnc = log --pretty=format:"%h\\ %s\\ [%cn]"
+    ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+    lalias = "!git config -l | grep alias | cut -c 7-"
+    lf = log -u
+    lt = describe --tags --abbrev=0
+    tree = log --graph --decorate --pretty=oneline --abbrev-commit
+
+    ac = "!git add -A && git commit"
+
+    delete-branches = "git branch | grep -v "master" | xargs git branch -D"
+    fetch-all = fetch --all -p
+
+    diff = diff --word-diff
+    dd = difftool --dir-diff --cached
+
+[core]
+    symlinks = false
+    autocrlf = input
+    fscache = true
+[push]
+    default = upstream
+[branch]
+    autosetupmerge = true
+[url "https://"]
+    insteadOf = git://
+[diff]
+    tool = meld
+    renames = copies
+    mnemonicprefix = true
+[difftool]
+    prompt = false
+[difftool "meld"]
+    cmd = meld "$LOCAL" "$REMOTE"
+[merge]
+    tool = meld
+[mergetool "meld"]
+    cmd = meld "$LOCAL" "$BASE" "$REMOTE" --output "$MERGED"
+    keepBackup = false
+[advice]
+    statusHints = false
+    pushNonFastForward = false
+[user]
+    email = ricky.ratnayake@gmail.com
+    name = rickyrattlesnake
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+    interactive = true
+[help]
+    format = html
