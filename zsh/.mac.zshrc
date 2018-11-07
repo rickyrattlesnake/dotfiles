@@ -34,3 +34,7 @@ zplug load
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 ###########################
+
+#### kubernetes ####
+if [ $commands[kubectl] ]; then source <(kubectl completion zsh); fi
+######

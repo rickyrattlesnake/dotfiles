@@ -3,6 +3,11 @@
 
 alias ls='ls -G'
 alias ll='ls -al'
+alias test:headless='yarn test --browsers ChromeHeadlessNoSandbox --source-map=false'
+alias docker:stop-all='docker stop $(docker ps -p)'
+alias docker:rm-all='docker rm $(docker ps -aq)'
+alias docker:wipe='docker volume prune'
+
 alias dotFilesShow='defaults write com.apple.finder AppleShowAllFiles YES;
 killall Finder /System/Library/CoreServices/Finder.app'
 
