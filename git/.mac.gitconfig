@@ -16,7 +16,7 @@
     tree = log --graph --decorate --pretty=oneline --abbrev-commit
 
     ac = "!git add -A && git commit"
-    ammend = "git commit --amend --no-edit"
+    amend = "commit --amend --no-edit"
 
     delete-branches = "git branch | grep -v "master" | xargs git branch -D"
     fetch-all = fetch --all -p
