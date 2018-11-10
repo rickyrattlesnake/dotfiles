@@ -1,3 +1,5 @@
+[credential]
+	helper = osxkeychain
 [alias]
     s = status
     co = checkout
@@ -14,10 +16,11 @@
     tree = log --graph --decorate --pretty=oneline --abbrev-commit
 
     ac = "!git add -A && git commit"
+    amend = "commit --amend --no-edit"
 
     delete-branches = "git branch | grep -v "master" | xargs git branch -D"
     fetch-all = fetch --all -p
-
+ 
     diff = diff --word-diff
     dd = difftool --dir-diff --cached
 
@@ -27,6 +30,8 @@
     fscache = true
 [push]
     default = upstream
+[pull]
+    rebase = true
 [branch]
     autosetupmerge = true
 [url "https://"]
