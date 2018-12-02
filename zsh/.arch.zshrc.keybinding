@@ -4,17 +4,17 @@ bindkey -e
 
 declare -g -A keys
 
-keys[Home]="$terminfo[khome]"
-keys[End]="$terminfo[kend]"
-keys[Insert]="$terminfo[kich1]"
-keys[Backspace]="$terminfo[kbs]"
-keys[Delete]="$terminfo[kdch1]"
-keys[Up]="$terminfo[kcuu1]"
-keys[Down]="$terminfo[kcud1]"
-keys[Left]="$terminfo[kcub1]"
-keys[Right]="$terminfo[kcuf1]"
-keys[PageUp]="$terminfo[kpp]"
-keys[PageDown]="$terminfo[knp]"
+keys[Home]="^[[H"
+keys[End]="^[[F"
+keys[Insert]="^[[2~"
+keys[Backspace]="^?"
+keys[Delete]="^[[3~"
+keys[PageUp]="^[[5~"
+keys[PageDown]="^[[6~"
+keys[Up]="^[OA"
+keys[Down]="^[OB"
+keys[Right]="^[OC"
+keys[Left]="^[OD"
 
 # setup keys accordingly
 [[ -n "$keys[Home]"      ]] && bindkey -- "$keys[Home]"      beginning-of-line
@@ -26,16 +26,5 @@ keys[PageDown]="$terminfo[knp]"
 [[ -n "$keys[Down]"      ]] && bindkey -- "$keys[Down]"      down-line-or-history
 [[ -n "$keys[Left]"      ]] && bindkey -- "$keys[Left]"      backward-char
 [[ -n "$keys[Right]"     ]] && bindkey -- "$keys[Right]"     forward-char
-
-if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
-  function zle-line-init () {
-    echoti smkx
-  }
-  function zle-line-finish () {
-    echoti rmkx
-  }
-  zle -N zle-line-init
-  zle -N zle-line-finish
-fi
 
 ###############################
