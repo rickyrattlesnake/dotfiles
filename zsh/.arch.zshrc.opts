@@ -1,0 +1,18 @@
+SAVEHIST=5000
+HISTSIZE=10000
+HISTFILE=$HOME/.zsh_history
+
+## History
+setopt appendhistory
+unsetopt histbeep
+setopt histignoredups
+setopt histreduceblanks
+setopt histsavenodups
+unsetopt incappendhistory
+setopt sharehistory
+
+# setopt histverify
+
+## Directory
+setopt autocd
+setopt autopushd

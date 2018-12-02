@@ -4,10 +4,10 @@ POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_DISABLE_RPROMPT=true
 
 ######################
-
+source ~/.zshrc.opts
 source ~/.zshrc.keybinding
+source ~/.zshrc.alias
 
-setopt appendhistory autocd
 zstyle :compinstall filename '/home/rattlesnake/.zshrc'
 
 autoload -Uz compinit
@@ -16,7 +16,6 @@ compinit
 [[ $- != *i* ]] && return
 
 
-source ~/.zshrc.alias
 
 BROWSER=/usr/bin/chromium
 EDITOR=/usr/bin/nano
