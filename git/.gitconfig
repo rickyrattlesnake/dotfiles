@@ -29,10 +29,13 @@
     fscache = true
 [push]
     default = upstream
+[pull]
+    rebase = true
 [branch]
-    autosetupmerge = true
-[url "https://"]
-    insteadOf = git://
+    autosetupmerge = false
+    autosetuprebase = "always"
+[url "ssh://git@github.com/"]
+    insteadOf = https://github.com/
 [diff]
     tool = meld
     renames = copies
