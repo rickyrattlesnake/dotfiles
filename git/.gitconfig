@@ -18,7 +18,10 @@
     pushmaster = push -u origin master
 
     delete-branches = "git branch | grep -v "master" | xargs git branch -D"
-    fetch-all = fetch --all -p
+    files = "!f() { git diff --name-status \"$1^\" \"$1\"; }; f"    
+    kill = "!f() { git push origin \":$1\"; git branch -D \"$1\"; }; f"    
+
+    fa = fetch --all -p
 
     diff = diff --word-diff
     dd = difftool --dir-diff --cached

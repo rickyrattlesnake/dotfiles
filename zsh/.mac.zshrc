@@ -9,22 +9,21 @@ POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_DISABLE_RPROMPT=true
 
 ######################
-setopt appendhistory autocd
+
+source ~/.zshrc.opts
+source ~/.zshrc.keybinding
+source ~/.zshrc.alias
+source ~/.zshrc.functions
 
 zstyle :compinstall filename "$HOME/.zshrc"
 autoload -Uz compinit
 compinit
 
-source ~/.zshrc.keybinding
-[[ $- != *i* ]] && return
-
-source ~/.zshrc.alias
-
 BROWSER=/usr/bin/chromium
 EDITOR=/usr/bin/nano
 
 ######## zplug ##############
-zplugInitPath=$(brew --prefix zplug)/init.zsh
+zplugInitPath="$HOME/.zplug/init.zsh"
 source $zplugInitPath
 
 zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
