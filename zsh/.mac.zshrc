@@ -37,3 +37,15 @@ source $(brew --prefix nvm)/nvm.sh
 #### kubernetes ####
 if [ $commands[kubectl] ]; then source <(kubectl completion zsh); fi
 ######
+
+############### Airtasker ###########
+export PATH=~/Library/Python/3.7/bin:/usr/local/bin:$PATH
+# Disable S3 lookup for maintenance mode in Airtasker Web
+export DISABLE_MAINTENANCE_MODE_CHECKS=true
+# Disable S3 lookup for heavy tasks in Airtasker Web
+export DISABLE_HEAVY_TASKS_CHECKS=true
+export REGION=1036
+export TARGET=dev
+export DEPLOYMENT_UTILS_DIR=$HOME/projects/deployment-utilities
+source $DEPLOYMENT_UTILS_DIR/airtasker.rc
+source ~/.airtasker.rc

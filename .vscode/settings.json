@@ -1,6 +1,62 @@
 {
-    "editor.fontSize": 14,
-    "files.trimFinalNewlines": true,
-    "files.insertFinalNewline": true,
-    "files.trimTrailingWhitespace": true
+  "editor.detectIndentation": false,
+  "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 14,
+  "editor.formatOnSave": true,
+  "editor.minimap.enabled": false,
+  "editor.snippetSuggestions": "top",
+  "editor.tabSize": 2,
+  "emmet.showSuggestionsAsSnippets": true,
+  "emmet.syntaxProfiles": {
+    "javascript": "jsx",
+    "typescript": "tsx",
+    "xml": {
+      "attr_quotes": "single"
+    }
+  },
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/**": true
+  },
+  "files.associations": {
+    "*.spec": "gauge",
+    "*.cpt": "gauge"
+  },
+  "git.autofetch": true,
+  "javascript.implicitProjectConfig.experimentalDecorators": true,
+  "jest.autoEnable": false,
+  "launch": {
+    "compounds": [],
+    "configurations": [
+      {
+        "name": "Jest Current File",
+        "type": "node",
+        "request": "launch",
+        "disableOptimisticBPs": true,
+        "runtimeArgs": [
+          "--inspect-brk",
+          "${workspaceRoot}/node_modules/.bin/jest",
+          "--runInBand",
+          "--no-cache",
+          "--no-watch",
+          "${relativeFile}"
+        ],
+        "console": "integratedTerminal",
+        "internalConsoleOptions": "neverOpen",
+        "port": 9229
+      }
+    ]
+  },
+  "prettier.printWidth": 120,
+  "prettier.trailingComma": "all",
+  "terminal.integrated.fontFamily": "Source Code Pro for Powerline",
+  "terminal.integrated.shell.linux": "/usr/local/bin/zsh",
+  "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
+  "window.title": "${activeEditorMedium}${separator}${rootName}",
+  "window.zoomLevel": 0,
+  "workbench.colorTheme": "One Dark Pro Vivid"
 }
