@@ -1,12 +1,15 @@
 {
   "editor.detectIndentation": false,
+  "editor.foldingStrategy": "indentation",
   "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "editor.fontSize": 14,
   "editor.formatOnSave": true,
   "editor.minimap.enabled": false,
+  "editor.showFoldingControls": "always",
   "editor.snippetSuggestions": "top",
   "editor.tabSize": 2,
+  "editor.formatOnSaveTimeout": 1500,
   "emmet.showSuggestionsAsSnippets": true,
   "emmet.syntaxProfiles": {
     "javascript": "jsx",
@@ -15,6 +18,10 @@
       "attr_quotes": "single"
     }
   },
+  "files.associations": {
+    "*.cpt": "gauge",
+    "*.spec": "gauge"
+  },
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "files.watcherExclude": {
@@ -22,41 +29,65 @@
     "**/.git/subtree-cache/**": true,
     "**/node_modules/**": true
   },
-  "files.associations": {
-    "*.spec": "gauge",
-    "*.cpt": "gauge"
-  },
   "git.autofetch": true,
+  "git.confirmSync": false,
   "javascript.implicitProjectConfig.experimentalDecorators": true,
-  "jest.autoEnable": false,
+  // "jest.autoEnable": false,
   "launch": {
     "compounds": [],
     "configurations": [
       {
-        "name": "Jest Current File",
-        "type": "node",
-        "request": "launch",
+        "console": "integratedTerminal",
         "disableOptimisticBPs": true,
+        "internalConsoleOptions": "neverOpen",
+        "name": "Jest Current File",
+        "port": 9301,
+        "request": "launch",
         "runtimeArgs": [
-          "--inspect-brk",
+          "--inspect=9301",
           "${workspaceRoot}/node_modules/.bin/jest",
           "--runInBand",
           "--no-cache",
           "--no-watch",
           "${relativeFile}"
         ],
-        "console": "integratedTerminal",
+        "runtimeExecutable": "/Users/rattlesnake/.nvm/versions/node/v10.15.1/bin/node",
+        "type": "node"
+      },
+      {
         "internalConsoleOptions": "neverOpen",
-        "port": 9229
+        "name": "Node Server Attach",
+        "port": 9229,
+        "request": "attach",
+        "type": "node"
       }
     ]
   },
   "prettier.printWidth": 120,
-  "prettier.trailingComma": "all",
+  "prettier.singleQuote": true,
+  "[ruby]": {
+    "editor.formatOnSave": false
+  },
+  "ruby.format": "rubocop",
+  "ruby.lint": {
+    // "reek": true,
+    "rubocop": true
+    // "fasterer": true,
+    // "debride": true,
+    // "ruby-lint": true
+  },
+  "ruby.lintDebounceTime": 500,
+  "ruby.useLanguageServer": true,
+  "ruby.intellisense": "rubyLocate",
+  "scss.lint.argumentsInColorFunction": "ignore",
+  "scss.lint.hexColorLength": "ignore",
+  "solargraph.formatting": true,
   "terminal.integrated.fontFamily": "Source Code Pro for Powerline",
   "terminal.integrated.shell.linux": "/usr/local/bin/zsh",
   "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
+  "typescript.updateImportsOnFileMove.enabled": "always",
   "window.title": "${activeEditorMedium}${separator}${rootName}",
-  "window.zoomLevel": 0,
-  "workbench.colorTheme": "One Dark Pro Vivid"
+  "window.zoomLevel": -1,
+  "workbench.colorTheme": "One Dark Pro Vivid",
+  "files.trimTrailingWhitespace": true
 }
