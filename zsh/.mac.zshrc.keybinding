@@ -1,10 +1,22 @@
 ###############################
 ## Key Bindings ###############
+
+autoload -U up-line-or-beginning-search
+autoload -U down-line-or-beginning-search
+
 bindkey -e
 
-bindkey "^[D" backward-word
-bindkey "^[C" forward-word
 bindkey "^[a" beginning-of-line
 bindkey "^[e" end-of-line
+
+# backward and forward word with option+left/right
+bindkey '^[D' backward-word
+bindkey '^[C' forward-word
+
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+
+bindkey "^[[A" up-line-or-beginning-search # Up
+bindkey "^[[B" down-line-or-beginning-search # Down
 
 ###############################

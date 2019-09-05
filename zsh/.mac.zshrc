@@ -1,12 +1,6 @@
 ##### setup
-export PATH=/usr/local/bin:$PATH
+export PATH=~/Library/Python/3.7/bin:/usr/local/bin:$PATH
 #####
-
-######################
-## ZSH THEME CONFIG ##
-POWERLEVEL9K_MODE='nerdfont-complete'
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-POWERLEVEL9K_DISABLE_RPROMPT=true
 
 ######################
 
@@ -16,30 +10,38 @@ source ~/.zshrc.alias
 source ~/.zshrc.functions
 
 zstyle :compinstall filename "$HOME/.zshrc"
-autoload -Uz compinit
-compinit
 
 BROWSER=/usr/bin/chromium
 EDITOR=/usr/bin/nano
 
-######## zplug ##############
-zplugInitPath="$HOME/.zplug/init.zsh"
-source $zplugInitPath
+######## Antibody ###########
+autoload -Uz compinit
+compinit -i
 
-zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
+source ~/.zsh_plugins.sh
 
-zplug load
+#############################
+
+
+######### Powerlevel10k Config
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+#########
+
+### fzf
+export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
+####
+
 ######## nvm ##############
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 ###########################
 
 #### kubernetes ####
+KUBECONFIG=$HOME/.kube/config:$HOME/.kube/config.airtasker.yml
 if [ $commands[kubectl] ]; then source <(kubectl completion zsh); fi
 ######
 
-############### Airtasker ###########
-export PATH=~/Library/Python/3.7/bin:/usr/local/bin:$PATH
 # Disable S3 lookup for maintenance mode in Airtasker Web
 export DISABLE_MAINTENANCE_MODE_CHECKS=true
 # Disable S3 lookup for heavy tasks in Airtasker Web
@@ -48,4 +50,9 @@ export REGION=1036
 export TARGET=dev
 export DEPLOYMENT_UTILS_DIR=$HOME/projects/deployment-utilities
 source $DEPLOYMENT_UTILS_DIR/airtasker.rc
-source ~/.airtasker.rc
+source $DEPLOYMENT_UTILS_DIR/kubernetes.rc
+
+export CLOUDSMITH_API_KEY=836c4d11a7b14f988bffdf7b1d740750c67c789a
+
+# rbenv auto init
+eval "$(rbenv init -)"
