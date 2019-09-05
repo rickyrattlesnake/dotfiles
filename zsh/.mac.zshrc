@@ -52,7 +52,5 @@ export DEPLOYMENT_UTILS_DIR=$HOME/projects/deployment-utilities
 source $DEPLOYMENT_UTILS_DIR/airtasker.rc
 source $DEPLOYMENT_UTILS_DIR/kubernetes.rc
 
-export CLOUDSMITH_API_KEY=836c4d11a7b14f988bffdf7b1d740750c67c789a
-
 # rbenv auto init
 eval "$(rbenv init -)"
