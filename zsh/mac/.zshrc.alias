@@ -4,6 +4,7 @@
 alias zource='source ~/.zshrc'
 alias ls='ls -G'
 alias ll='ls -al'
+alias g='git'
 
 alias dotFilesShow='defaults write com.apple.finder AppleShowAllFiles YES;
 killall Finder /System/Library/CoreServices/Finder.app'
@@ -31,4 +32,5 @@ alias docker:rmi:all='docker rmi $(docker images -q)'
 ### Kubernetes
 alias k:ctx='kubectl config set current-context'
 alias kt='kubetail'
+alias mini='minikube'
 #######################ß

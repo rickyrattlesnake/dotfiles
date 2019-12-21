@@ -37,20 +37,22 @@ export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 ###########################
 
-#### kubernetes ####
 KUBECONFIG=$HOME/.kube/config:$HOME/.kube/config.airtasker.yml
-if [ $commands[kubectl] ]; then source <(kubectl completion zsh); fi
-######
+if [ $commands[kubectl] ]; then
+  source <(kubectl completion zsh);
+fi
 
-# Disable S3 lookup for maintenance mode in Airtasker Web
-export DISABLE_MAINTENANCE_MODE_CHECKS=true
-# Disable S3 lookup for heavy tasks in Airtasker Web
-export DISABLE_HEAVY_TASKS_CHECKS=true
-export REGION=1036
-export TARGET=dev
-export DEPLOYMENT_UTILS_DIR=$HOME/projects/deployment-utilities
-source $DEPLOYMENT_UTILS_DIR/airtasker.rc
-source $DEPLOYMENT_UTILS_DIR/kubernetes.rc
+
+if [ -f "~/.zshrc.secrets" ]; then
+  source ~/.zshrc.secrets
+fi
 
 # rbenv auto init
-eval "$(rbenv init -)"
+if [ $commands[rbenv]]; then
+  eval "$(rbenv init -)"
+fi
+
+# airtasker configurations
+if [ -f "~/.zshrc.airtasker" ]; then
+  source ~/.zshrc.airtasker
+fi
