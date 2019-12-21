@@ -19,9 +19,7 @@ autoload -Uz compinit
 compinit -i
 
 source ~/.zsh_plugins.sh
-
 #############################
-
 
 ######### Powerlevel10k Config
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -40,11 +38,6 @@ source $(brew --prefix nvm)/nvm.sh
 KUBECONFIG=$HOME/.kube/config:$HOME/.kube/config.airtasker.yml
 if [ $commands[kubectl] ]; then
   source <(kubectl completion zsh);
-fi
-
-
-if [ -f "~/.zshrc.secrets" ]; then
-  source ~/.zshrc.secrets
 fi
 
 # rbenv auto init
