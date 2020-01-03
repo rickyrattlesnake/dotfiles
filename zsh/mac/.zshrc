@@ -41,7 +41,7 @@ if [ $commands[kubectl] ]; then
 fi
 
 # rbenv auto init
-if [ $commands[rbenv]]; then
+if [ $commands[rbenv] ]; then
   eval "$(rbenv init -)"
 fi
 
