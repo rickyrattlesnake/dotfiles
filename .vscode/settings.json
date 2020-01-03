@@ -20,13 +20,16 @@
   },
   "files.associations": {
     "*.cpt": "gauge",
-    "*.spec": "gauge"
+    "*.spec": "gauge",
+    "*.yaml.*": "yaml"
   },
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "files.watcherExclude": {
     "**/.git/objects/**": true,
     "**/.git/subtree-cache/**": true,
+    "**/build/**": true,
+    "**/coverage/**": true,
     "**/node_modules/**": true
   },
   "git.autofetch": true,
@@ -63,8 +66,6 @@
       }
     ]
   },
-  "prettier.printWidth": 120,
-  "prettier.singleQuote": true,
   "[ruby]": {
     "editor.formatOnSave": false
   },
@@ -87,7 +88,39 @@
   "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "window.title": "${activeEditorMedium}${separator}${rootName}",
-  "window.zoomLevel": -1,
-  "workbench.colorTheme": "One Dark Pro Vivid",
-  "files.trimTrailingWhitespace": true
+  "window.zoomLevel": 0,
+  "workbench.colorTheme": "Material Theme Palenight High Contrast",
+  "files.trimTrailingWhitespace": true,
+  "git.enableSmartCommit": true,
+  "[yaml]": {
+    "editor.formatOnSave": false,
+    "editor.formatOnType": false,
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[NGINX]": {},
+  "terminal.integrated.rendererType": "dom",
+  "workbench.iconTheme": "material-icon-theme",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "diffEditor.ignoreTrimWhitespace": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "search.exclude": {
+    "**/*.code-search": false
+  },
+  "files.exclude": {
+    "**/build": true,
+    "**/coverage": true
+  },
+  "javascript.preferences.importModuleSpecifier": "relative",
+  "typescript.preferences.importModuleSpecifier": "relative"
 }
