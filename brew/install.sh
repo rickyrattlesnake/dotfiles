@@ -12,4 +12,7 @@ brew install virtualbox \
 brew cask install font-hack-nerd-font \
   iterm2 \
   visual-studio-code \
-  gpg-suite-no-mail
+  gpg-suite-no-mail \
+  meld \
+  intellij-idea \
+  font-fira-code

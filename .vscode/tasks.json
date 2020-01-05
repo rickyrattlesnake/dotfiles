@@ -9,7 +9,7 @@
       "command": "yaml2json ${file} | json-to-js | pbcopy"
     },
     {
-      "label": "Rspec - this file",
+      "label": "rspec:file",
       "type": "shell",
       "command": "$(which bundle) exec rspec ${file}",
       "group": "test"

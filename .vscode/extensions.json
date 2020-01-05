@@ -4,7 +4,12 @@
   // List of extensions which should be recommended for users of this workspace.
   "recommendations": [
     "sidneys1.gitconfig",
-    "eamodio.gitlens"
+    "eamodio.gitlens",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "k--kato.intellij-idea-keybindings",
+    "equinusocio.vsc-material-theme",
+    "pkief.material-icon-theme"
   ],
   // List of extensions recommended by VS Code that should not be recommended for users of this workspace.
   "unwantedRecommendations": []

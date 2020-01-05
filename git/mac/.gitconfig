@@ -21,11 +21,11 @@
 
     # push
     pf = push -f
-    pm = push -u origin master
+    po = "!f() { git push -u origin $(git b); }; f"
 
     # pull, rebase
     rbi = rebase -i
-    rb-master = "!git fa && git rbi origin/master"
+    rbi-master = "!git fa && git rbi origin/master"
 
     # branch
     br = branch -a -v
@@ -35,7 +35,6 @@
 
     # diff
     files = "!f() { git diff --name-status \"$1^\" \"$1\"; }; f"
-
 
     diff = diff --word-diff
     dd = difftool --dir-diff --cached
