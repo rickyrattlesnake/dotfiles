@@ -40,6 +40,8 @@
     diff = diff --word-diff
     dd = difftool --dir-diff --cached
 
+[commit]
+    # gpgsign = true
 [core]
     symlinks = false
     autocrlf = input
@@ -72,7 +74,7 @@
 [user]
     email = ricky.ratnayake@gmail.com
     name = rickyrattlesnake
-    signinkey = 1A74A4C47819E4CF
+    # signinkey = 7819E4CF
 [color]
     diff = auto
     status = auto

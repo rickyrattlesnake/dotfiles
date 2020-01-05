@@ -11,4 +11,5 @@ brew install virtualbox \
 
 brew cask install font-hack-nerd-font \
   iterm2 \
-  visual-studio-code
+  visual-studio-code \
+  gpg-suite-no-mail
