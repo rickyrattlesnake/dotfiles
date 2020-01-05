@@ -1,26 +1,42 @@
-[credential]
-	helper = osxkeychain
 [alias]
+    lalias = "!git config -l | grep alias | cut -c 7-"
     s = status
     co = checkout
-    br = branch -a -v
-    ci = commit
+
 
     ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
     ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
     lnc = log --pretty=format:"%h\\ %s\\ [%cn]"
     ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
-    lalias = "!git config -l | grep alias | cut -c 7-"
     lf = log -u
     lt = describe --tags --abbrev=0
     tree = log --graph --decorate --pretty=oneline --abbrev-commit
 
-    ac = "!git add -A && git commit"
-    amend = "commit --amend --no-edit"
+    # commit
+    ci = commit
+    ac = "!git add -A && git ci"
 
+    # fetch
+    fa = fetch --all -p
+
+    # push
+    pf = push -f
+    pm = push -u origin master
+
+    # pull, rebase
+    rbi = rebase -i
+    rb-master = "!git fa && git rbi origin/master"
+
+    # branch
+    br = branch -a -v
+    b = rev-parse --abbrev-ref HEAD
     delete-branches = "git branch | grep -v "master" | xargs git branch -D"
-    fetch-all = fetch --all -p
- 
+    kill-branch = "!f() { git push origin \":$1\"; git branch -D \"$1\"; }; f"
+
+    # diff
+    files = "!f() { git diff --name-status \"$1^\" \"$1\"; }; f"
+
+
     diff = diff --word-diff
     dd = difftool --dir-diff --cached
 
@@ -33,9 +49,10 @@
 [pull]
     rebase = true
 [branch]
-    autosetupmerge = true
-[url "https://"]
-    insteadOf = git://
+    autosetupmerge = false
+    autosetuprebase = "always"
+[url "ssh://git@github.com/"]
+    insteadOf = https://github.com/
 [diff]
     tool = meld
     renames = copies
@@ -55,6 +72,7 @@
 [user]
     email = ricky.ratnayake@gmail.com
     name = rickyrattlesnake
+    signinkey = 1A74A4C47819E4CF
 [color]
     diff = auto
     status = auto
