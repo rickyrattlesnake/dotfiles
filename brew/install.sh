@@ -7,7 +7,13 @@ brew install virtualbox \
   gpg \
   zsh \
   python3 \
-  python2
+  python2 \
+  ag \
+  p7zip \
+  jq \
+  yq \
+  kubernetes-cli \
+
 
 brew cask install font-hack-nerd-font \
   iterm2 \
@@ -15,4 +21,5 @@ brew cask install font-hack-nerd-font \
   gpg-suite-no-mail \
   meld \
   intellij-idea \
-  font-fira-code
+  font-fira-code \
+  1password
