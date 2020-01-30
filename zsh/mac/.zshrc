@@ -11,10 +11,14 @@ export PATH=~/Library/Python/3.7/bin:/usr/local/bin:$PATH
 
 ######################
 
-source ~/.zshrc.opts
-source ~/.zshrc.keybinding
-source ~/.zshrc.alias
-source ~/.zshrc.functions
+source $HOME/.zshrc.opts
+source $HOME/.zshrc.keybinding
+source $HOME/.zshrc.alias
+source $HOME/.zshrc.functions
+# airtasker configurations
+if [ -f $HOME/.zshrc.airtasker ]; then
+  source $HOME/.zshrc.airtasker
+fi
 
 zstyle :compinstall filename "$HOME/.zshrc"
 
@@ -52,7 +56,4 @@ if [ $commands[rbenv] ]; then
   eval "$(rbenv init -)"
 fi
 
-# airtasker configurations
-if [ -f "~/.zshrc.airtasker" ]; then
-  source ~/.zshrc.airtasker
-fi
+

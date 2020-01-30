@@ -1,15 +1,42 @@
 {
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker",
+    "editor.formatOnSave": false
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[NGINX]": {},
+  "[ruby]": {
+    "editor.formatOnSave": false
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml",
+    "editor.formatOnSave": false,
+    "editor.formatOnType": false
+  },
+  "bracketPairColorizer.colorMode": "Consecutive",
+  "diffEditor.ignoreTrimWhitespace": false,
   "editor.detectIndentation": false,
   "editor.foldingStrategy": "indentation",
   "editor.fontFamily": "FiraCode-Retina, Fira Code, Menlo, Monaco, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "editor.fontSize": 14,
   "editor.formatOnSave": true,
+  "editor.formatOnSaveTimeout": 1500,
   "editor.minimap.enabled": false,
   "editor.showFoldingControls": "always",
   "editor.snippetSuggestions": "top",
   "editor.tabSize": 2,
-  "editor.formatOnSaveTimeout": 1500,
   "emmet.showSuggestionsAsSnippets": true,
   "emmet.syntaxProfiles": {
     "javascript": "jsx",
@@ -23,8 +50,12 @@
     "*.spec": "gauge",
     "*.yaml.*": "yaml"
   },
+  "files.exclude": {
+    "**/coverage": true
+  },
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
   "files.watcherExclude": {
     "**/.git/objects/**": true,
     "**/.git/subtree-cache/**": true,
@@ -34,8 +65,11 @@
   },
   "git.autofetch": true,
   "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "gitlens.codeLens.enabled": false,
   "javascript.implicitProjectConfig.experimentalDecorators": true,
-  // "jest.autoEnable": false,
+  "javascript.preferences.importModuleSpecifier": "relative",
+  "javascript.updateImportsOnFileMove.enabled": "always",
   "launch": {
     "compounds": [],
     "configurations": [
@@ -54,7 +88,7 @@
           "--no-watch",
           "${relativeFile}"
         ],
-        "runtimeExecutable": "/Users/rattlesnake/.nvm/versions/node/v10.15.1/bin/node",
+        "runtimeExecutable": "/Users/rickyratnayake/.nvm/versions/node/v12.14.0/bin/node",
         "type": "node"
       },
       {
@@ -66,61 +100,30 @@
       }
     ]
   },
-  "[ruby]": {
-    "editor.formatOnSave": false
-  },
   "ruby.format": "rubocop",
+  "ruby.intellisense": "rubyLocate",
   "ruby.lint": {
-    // "reek": true,
-    "rubocop": true
-    // "fasterer": true,
-    // "debride": true,
-    // "ruby-lint": true
+    "rubocop": {
+      "useBundler": true
+    }
   },
   "ruby.lintDebounceTime": 500,
+  "ruby.useBundler": true,
   "ruby.useLanguageServer": true,
-  "ruby.intellisense": "rubyLocate",
   "scss.lint.argumentsInColorFunction": "ignore",
   "scss.lint.hexColorLength": "ignore",
+  "search.exclude": {
+    "**/*.code-search": false
+  },
   "solargraph.formatting": true,
   "terminal.integrated.fontFamily": "MesloLGS NF",
+  "terminal.integrated.rendererType": "dom",
   "terminal.integrated.shell.linux": "/usr/local/bin/zsh",
   "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
+  "typescript.preferences.importModuleSpecifier": "relative",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "window.title": "${activeEditorMedium}${separator}${rootName}",
   "window.zoomLevel": 0,
   "workbench.colorTheme": "Material Theme Ocean",
-  "files.trimTrailingWhitespace": true,
-  "git.enableSmartCommit": true,
-  "[yaml]": {
-    "editor.formatOnSave": false,
-    "editor.formatOnType": false,
-    "editor.defaultFormatter": "redhat.vscode-yaml"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[NGINX]": {},
-  "terminal.integrated.rendererType": "dom",
-  "workbench.iconTheme": "material-icon-theme",
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "diffEditor.ignoreTrimWhitespace": false,
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "search.exclude": {
-    "**/*.code-search": false
-  },
-  "files.exclude": {
-    "**/build": true,
-    "**/coverage": true
-  },
-  "javascript.preferences.importModuleSpecifier": "relative",
-  "typescript.preferences.importModuleSpecifier": "relative"
+  "workbench.iconTheme": "material-icon-theme"
 }

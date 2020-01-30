@@ -1,7 +1,5 @@
 # Logs
 *.log
-
 # Compiled files
 *.zwc
-
 .idea

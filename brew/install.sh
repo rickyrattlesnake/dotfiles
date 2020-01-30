@@ -13,7 +13,9 @@ brew install virtualbox \
   jq \
   yq \
   kubernetes-cli \
-
+  rbenv \
+  lastpass-cli \
+  terraform
 
 brew cask install font-hack-nerd-font \
   iterm2 \
@@ -22,4 +24,7 @@ brew cask install font-hack-nerd-font \
   meld \
   intellij-idea \
   font-fira-code \
-  1password
+  1password \
+  spotify \
+  postman \
+  datagrip
