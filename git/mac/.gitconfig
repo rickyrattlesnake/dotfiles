@@ -1,83 +1,83 @@
 [alias]
-    lalias = "!git config -l | grep alias | cut -c 7-"
-    s = status
-    co = checkout
+lalias = "!git config -l | grep alias | cut -c 7-"
+s = status
+co = checkout
 
+ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+lnc = log --pretty=format:"%h\\ %s\\ [%cn]"
+ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+lf = log -u
+lt = describe --tags --abbrev=0
+tree = log --graph --decorate --pretty=oneline --abbrev-commit
 
-    ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
-    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
-    lnc = log --pretty=format:"%h\\ %s\\ [%cn]"
-    ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
-    lf = log -u
-    lt = describe --tags --abbrev=0
-    tree = log --graph --decorate --pretty=oneline --abbrev-commit
+# commit
+ci = commit
+ac = "!git add -A && git ci"
 
-    # commit
-    ci = commit
-    ac = "!git add -A && git ci"
+# fetch
+fa = fetch --all -p
 
-    # fetch
-    fa = fetch --all -p
+# push
+pf = push --force-with-lease
+po = "!f() { git push -u origin $(git b); }; f"
 
-    # push
-    pf = push -f
-    po = "!f() { git push -u origin $(git b); }; f"
+# pull, rebase
+rbi = rebase -i
+rbi-master = "!git fa && git rbi origin/master"
+rbc = rebase --continue
 
-    # pull, rebase
-    rbi = rebase -i
-    rbi-master = "!git fa && git rbi origin/master"
+# branch
+br = branch -a -v
+b = rev-parse --abbrev-ref HEAD
+delete-branches = "git branch | grep -v "master" | xargs git branch -D"
+kill-branch = "!f() { git push origin \":$1\"; git branch -D \"$1\"; }; f"
 
-    # branch
-    br = branch -a -v
-    b = rev-parse --abbrev-ref HEAD
-    delete-branches = "git branch | grep -v "master" | xargs git branch -D"
-    kill-branch = "!f() { git push origin \":$1\"; git branch -D \"$1\"; }; f"
+# diff
+files = "!f() { git diff --name-status \"$1^\" \"$1\"; }; f"
 
-    # diff
-    files = "!f() { git diff --name-status \"$1^\" \"$1\"; }; f"
-
-    diff = diff --word-diff
-    dd = difftool --dir-diff --cached
+diff = diff --word-diff
+dd = difftool --dir-diff --cached
 
 [commit]
-    # gpgsign = true
+# gpgsign = true
 [core]
-    symlinks = false
-    autocrlf = input
-    fscache = true
+symlinks = false
+autocrlf = input
+fscache = true
 [push]
-    default = upstream
+default = upstream
 [pull]
-    rebase = true
+rebase = true
 [branch]
-    autosetupmerge = false
-    autosetuprebase = "always"
+autosetupmerge = false
+autosetuprebase = "always"
 [url "ssh://git@github.com/"]
-    insteadOf = https://github.com/
+insteadOf = https://github.com/
 [diff]
-    tool = meld
-    renames = copies
-    mnemonicprefix = true
+tool = meld
+renames = copies
+mnemonicprefix = true
 [difftool]
-    prompt = false
+prompt = false
 [difftool "meld"]
-    cmd = meld "$LOCAL" "$REMOTE"
+cmd = meld "$LOCAL" "$REMOTE"
 [merge]
-    tool = meld
+tool = meld
 [mergetool "meld"]
-    cmd = meld "$LOCAL" "$BASE" "$REMOTE" --output "$MERGED"
-    keepBackup = false
+cmd = meld "$LOCAL" "$BASE" "$REMOTE" --output "$MERGED"
+keepBackup = false
 [advice]
-    statusHints = false
-    pushNonFastForward = false
+statusHints = false
+pushNonFastForward = false
 [user]
-    email = ricky.ratnayake@gmail.com
-    name = rickyrattlesnake
-    # signinkey = 7819E4CF
+email = ricky.ratnayake@gmail.com
+name = rickyrattlesnake
+# signinkey = 7819E4CF
 [color]
-    diff = auto
-    status = auto
-    branch = auto
-    interactive = true
+diff = auto
+status = auto
+branch = auto
+interactive = true
 [help]
-    format = html
+format = html

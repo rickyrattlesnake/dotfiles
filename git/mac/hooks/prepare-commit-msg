@@ -10,7 +10,7 @@ if [ -z "$BRANCHES_TO_SKIP" ]; then
   BRANCHES_TO_SKIP=(master)
 fi
 
-BRANCH_NAME=$(git symbolic-ref --short HEAD)
+BRANCH_NAME=$(git rev-parse --abbrev-ref HEAD)
 BRANCH_NAME="${BRANCH_NAME##*/}"
 
 BRANCH_EXCLUDED=$(printf "%s\n" "${BRANCHES_TO_SKIP[@]}" | grep -c "^$BRANCH_NAME$")

@@ -28,3 +28,6 @@ brew cask install font-hack-nerd-font \
   spotify \
   postman \
   datagrip
+
+# AWS
+pip3 install awscli --upgrade --user
