@@ -20,7 +20,10 @@
     "erd0s.terraform-autocomplete",
     "stkb.rewrap",
     "coenraads.bracket-pair-colorizer",
-    "richie5um2.vscode-sort-json"
+    "richie5um2.vscode-sort-json",
+    "aaron-bond.better-comments",
+    "jeff-hykin.better-shellscript-syntax",
+    "foxundermoon.shell-format"
   ],
   // List of extensions recommended by VS Code that should not be recommended for users of this workspace.
   "unwantedRecommendations": []

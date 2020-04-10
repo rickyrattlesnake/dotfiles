@@ -1,42 +1,15 @@
 {
-  "[dockerfile]": {
-    "editor.defaultFormatter": "ms-azuretools.vscode-docker",
-    "editor.formatOnSave": false
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[NGINX]": {},
-  "[ruby]": {
-    "editor.formatOnSave": false
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[yaml]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml",
-    "editor.formatOnSave": false,
-    "editor.formatOnType": false
-  },
-  "bracketPairColorizer.colorMode": "Consecutive",
-  "diffEditor.ignoreTrimWhitespace": false,
   "editor.detectIndentation": false,
   "editor.foldingStrategy": "indentation",
   "editor.fontFamily": "FiraCode-Retina, Fira Code, Menlo, Monaco, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "editor.fontSize": 14,
   "editor.formatOnSave": true,
-  "editor.formatOnSaveTimeout": 1500,
   "editor.minimap.enabled": false,
   "editor.showFoldingControls": "always",
   "editor.snippetSuggestions": "top",
   "editor.tabSize": 2,
+  "editor.formatOnSaveTimeout": 1500,
   "emmet.showSuggestionsAsSnippets": true,
   "emmet.syntaxProfiles": {
     "javascript": "jsx",
@@ -48,14 +21,11 @@
   "files.associations": {
     "*.cpt": "gauge",
     "*.spec": "gauge",
-    "*.yaml.*": "yaml"
-  },
-  "files.exclude": {
-    "**/coverage": true
+    "*.yaml.*": "yaml",
+    "Makefile.*": "makefile"
   },
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
-  "files.trimTrailingWhitespace": true,
   "files.watcherExclude": {
     "**/.git/objects/**": true,
     "**/.git/subtree-cache/**": true,
@@ -65,11 +35,9 @@
   },
   "git.autofetch": true,
   "git.confirmSync": false,
-  "git.enableSmartCommit": true,
   "gitlens.codeLens.enabled": false,
   "javascript.implicitProjectConfig.experimentalDecorators": true,
-  "javascript.preferences.importModuleSpecifier": "relative",
-  "javascript.updateImportsOnFileMove.enabled": "always",
+  // "jest.autoEnable": false,
   "launch": {
     "compounds": [],
     "configurations": [
@@ -100,30 +68,75 @@
       }
     ]
   },
+  "[ruby]": {
+    "editor.formatOnSave": false
+  },
   "ruby.format": "rubocop",
-  "ruby.intellisense": "rubyLocate",
   "ruby.lint": {
     "rubocop": {
       "useBundler": true
     }
   },
   "ruby.lintDebounceTime": 500,
+  "ruby.intellisense": "rubyLocate",
   "ruby.useBundler": true,
   "ruby.useLanguageServer": true,
   "scss.lint.argumentsInColorFunction": "ignore",
   "scss.lint.hexColorLength": "ignore",
-  "search.exclude": {
-    "**/*.code-search": false
-  },
   "solargraph.formatting": true,
   "terminal.integrated.fontFamily": "MesloLGS NF",
-  "terminal.integrated.rendererType": "dom",
   "terminal.integrated.shell.linux": "/usr/local/bin/zsh",
   "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
-  "typescript.preferences.importModuleSpecifier": "relative",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "window.title": "${activeEditorMedium}${separator}${rootName}",
   "window.zoomLevel": 0,
   "workbench.colorTheme": "Material Theme Ocean",
-  "workbench.iconTheme": "material-icon-theme"
+  "files.trimTrailingWhitespace": true,
+  "git.enableSmartCommit": true,
+  "[yaml]": {
+    "editor.formatOnSave": false,
+    "editor.formatOnType": false,
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[NGINX]": {},
+  "terminal.integrated.rendererType": "dom",
+  "workbench.iconTheme": "material-icon-theme",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "diffEditor.ignoreTrimWhitespace": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "search.exclude": {
+    "**/*.code-search": false
+  },
+  "files.exclude": {
+    "**/coverage": true
+  },
+  "javascript.preferences.importModuleSpecifier": "relative",
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "[dockerfile]": {
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+  "[makefile]": {
+    "editor.insertSpaces": false,
+    "editor.tabSize": 2,
+    "editor.renderWhitespace": "boundary"
+  },
+  "editor.renderWhitespace": "none",
+  "java.configuration.checkProjectSettingsExclusions": false,
+  "typescriptHero.imports.disableImportsSorting": true,
+  "typescriptHero.imports.organizeOnSave": true
 }

@@ -3,35 +3,41 @@ lalias = "!git config -l | grep alias | cut -c 7-"
 s = status
 co = checkout
 
-ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+ls = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
 ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
-lnc = log --pretty=format:"%h\\ %s\\ [%cn]"
-ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
 lf = log -u
-lt = describe --tags --abbrev=0
 tree = log --graph --decorate --pretty=oneline --abbrev-commit
 
 # commit
 ci = commit
-ac = "!git add -A && git ci"
+ac = "!git add -A && git commit"
+# acp = "!f() { git add -A && git commit -m ${1} && g push; f"
+acp = "!f() { git add -A && git commit -m \"${1-wip}\" && git push; }; f"
 
 # fetch
 fa = fetch --all -p
 
 # push
 pf = push --force-with-lease
-po = "!f() { git push -u origin $(git b); }; f"
+po = "!f() { git push -u origin $(git rev-parse --abbrev-ref HEAD); }; f"
 
 # pull, rebase
+pl = pull
 rbi = rebase -i
-rbi-master = "!git fa && git rbi origin/master"
+rbi-master = "!git fetch --all -p && git rebase -i origin/master"
 rbc = rebase --continue
+rba = rebase --abort
+
+# stash
+shl = stash show
+shs = stash save
+shp = stash pop
 
 # branch
 br = branch -a -v
 b = rev-parse --abbrev-ref HEAD
 delete-branches = "git branch | grep -v "master" | xargs git branch -D"
-kill-branch = "!f() { git push origin \":$1\"; git branch -D \"$1\"; }; f"
+delete-remote-branch = "!f() { git push origin \":$1\"; git branch -D \"$1\"; }; f"
 
 # diff
 files = "!f() { git diff --name-status \"$1^\" \"$1\"; }; f"
