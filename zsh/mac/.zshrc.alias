@@ -3,9 +3,15 @@
 
 alias zource='source ~/.zshrc'
 alias ls='ls -G'
-alias ll='ls -al'
+alias la='ls -alh'
 alias g='git'
 alias y='yarn'
+alias t='tree -L 3'
+
+alias untar='tar -zxvf '
+alias ping='ping -c 5'
+alias ipe='curl ipinfo.io/ip'
+alias ipi='ipconfig getifaddr en0'
 
 alias dotFilesShow='defaults write com.apple.finder AppleShowAllFiles YES;
 killall Finder /System/Library/CoreServices/Finder.app'
@@ -35,3 +41,16 @@ alias k:ctx='kubectl config set current-context'
 alias kt='kubetail'
 alias mini='minikube'
 #######################ß
+
+## Networking
+alias ls:tcp='lsof -i TCP'
+alias vpn:status='scutil --nc status "WorkVPN"'
+alias vpn:disconnect='scutil --nc stop "WorkVPN"'
+
+## curl
+alias curl:send:json="curl -H 'Content-Type: application/json' -X POST"
+alias curl:accept:json="curl -H 'Accept: application/json' -w '%{json}'"
+alias curl:proxy="curl -x 'localhost:8001'"
+
+## Terraform
+alias tf="terraform"

@@ -56,4 +56,6 @@ if [ $commands[rbenv] ]; then
   eval "$(rbenv init -)"
 fi
 
-
+# rust
+# source $HOME/.cargo/env
+export PATH="$HOME/.cargo/bin:$PATH"

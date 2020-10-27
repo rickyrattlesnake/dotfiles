@@ -15,7 +15,10 @@ brew install virtualbox \
   kubernetes-cli \
   rbenv \
   lastpass-cli \
-  terraform
+  terraform \
+  tree \
+  fzf \
+  fd
 
 brew cask install font-hack-nerd-font \
   iterm2 \
@@ -27,7 +30,11 @@ brew cask install font-hack-nerd-font \
   1password \
   spotify \
   postman \
-  datagrip
+  datagrip \
+  tunnelblick
 
 # AWS
 pip3 install awscli --upgrade --user
+
+##
+$(brew --prefix)/opt/fzf/install
