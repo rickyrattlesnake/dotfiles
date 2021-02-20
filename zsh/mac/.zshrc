@@ -1,24 +1,13 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block, everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 ##### setup
 export PATH=~/Library/Python/3.7/bin:/usr/local/bin:$PATH
 #####
 
 ######################
 
-source $HOME/.zshrc.opts
-source $HOME/.zshrc.keybinding
-source $HOME/.zshrc.alias
-source $HOME/.zshrc.functions
-# airtasker configurations
-if [ -f $HOME/.zshrc.airtasker ]; then
-  source $HOME/.zshrc.airtasker
-fi
+source ~/.zshrc.opts
+source ~/.zshrc.keybinding
+source ~/.zshrc.alias
+source ~/.zshrc.functions
 
 zstyle :compinstall filename "$HOME/.zshrc"
 
@@ -31,11 +20,6 @@ compinit -i
 
 source ~/.zsh_plugins.sh
 #############################
-
-######### Powerlevel10k Config
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
-#########
 
 ### fzf
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
@@ -56,6 +40,19 @@ if [ $commands[rbenv] ]; then
   eval "$(rbenv init -)"
 fi
 
-# rust
-# source $HOME/.cargo/env
-export PATH="$HOME/.cargo/bin:$PATH"
+# airtasker configurations
+if [  -f $HOME/.zshrc.airtasker ]; then
+  source $HOME/.zshrc.airtasker
+fi
+
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block, everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+######### Powerlevel10k Config
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+#########
