@@ -20,7 +20,7 @@ brew install virtualbox \
   fzf \
   fd
 
-brew cask install font-hack-nerd-font \
+brew install --cask font-hack-nerd-font \
   iterm2 \
   visual-studio-code \
   gpg-suite-no-mail \
@@ -31,7 +31,8 @@ brew cask install font-hack-nerd-font \
   spotify \
   postman \
   datagrip \
-  tunnelblick
+  tunnelblick \
+  signal
 
 # AWS
 pip3 install awscli --upgrade --user
