@@ -103,7 +103,7 @@
   },
   "[NGINX]": {},
   "terminal.integrated.rendererType": "dom",
-  "workbench.iconTheme": "material-icon-theme",
+  "workbench.iconTheme": "vs-seti",
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },

@@ -3,27 +3,33 @@
   // Extension identifier format: ${publisher}.${name}. Example: vscode.csharp
   // List of extensions which should be recommended for users of this workspace.
   "recommendations": [
-    "sidneys1.gitconfig",
-    "eamodio.gitlens",
-    "esbenp.prettier-vscode",
-    "dbaeumer.vscode-eslint",
-    "k--kato.intellij-idea-keybindings",
+    // Utilities
+    "christian-kohler.path-intellisense",
+    "stkb.rewrap",
+    "aaron-bond.better-comments",
+    "richie5um2.vscode-sort-json",
+    // Themes & Visualisations
     "equinusocio.vsc-material-theme",
     "pkief.material-icon-theme",
-    "foxundermoon.shell-format",
+    "coenraads.bracket-pair-colorizer",
+    // VCS
+    "sidneys1.gitconfig",
+    "eamodio.gitlens",
+    // Languages
     "jeff-hykin.better-shellscript-syntax",
     "redhat.vscode-yaml",
-    "christian-kohler.path-intellisense",
+    "jeff-hykin.better-shellscript-syntax",
+    // Linters & Formatters
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "foxundermoon.shell-format",
+    "foxundermoon.shell-format",
+    // Docker
     "ms-azuretools.vscode-docker",
     "jeff-hykin.better-dockerfile-syntax",
-    "mauve.terraform",
-    "erd0s.terraform-autocomplete",
-    "stkb.rewrap",
-    "coenraads.bracket-pair-colorizer",
-    "richie5um2.vscode-sort-json",
-    "aaron-bond.better-comments",
-    "jeff-hykin.better-shellscript-syntax",
-    "foxundermoon.shell-format"
+    // Terraform
+    "4ops.terraform",
+    "hashicorp.terraform",
   ],
   // List of extensions recommended by VS Code that should not be recommended for users of this workspace.
   "unwantedRecommendations": []
