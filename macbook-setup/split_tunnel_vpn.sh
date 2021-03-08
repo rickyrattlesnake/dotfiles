@@ -51,4 +51,4 @@ addresses=(
 # dig +short ${addresses[@]} | xargs -I{} /sbin/route add -host {} -interface $1
 
 # To Delete routes
-dig +short ${addresses[@]} | xargs -I{} /sbin/route delete -host {}
+# dig +short ${addresses[@]} | xargs -I{} /sbin/route delete -host {}

@@ -3,33 +3,26 @@
   // Extension identifier format: ${publisher}.${name}. Example: vscode.csharp
   // List of extensions which should be recommended for users of this workspace.
   "recommendations": [
-    // Utilities
     "christian-kohler.path-intellisense",
     "stkb.rewrap",
     "aaron-bond.better-comments",
     "richie5um2.vscode-sort-json",
-    // Themes & Visualisations
     "equinusocio.vsc-material-theme",
     "pkief.material-icon-theme",
     "coenraads.bracket-pair-colorizer",
-    // VCS
     "sidneys1.gitconfig",
     "eamodio.gitlens",
-    // Languages
     "jeff-hykin.better-shellscript-syntax",
     "redhat.vscode-yaml",
-    "jeff-hykin.better-shellscript-syntax",
-    // Linters & Formatters
     "esbenp.prettier-vscode",
     "dbaeumer.vscode-eslint",
     "foxundermoon.shell-format",
-    "foxundermoon.shell-format",
-    // Docker
     "ms-azuretools.vscode-docker",
     "jeff-hykin.better-dockerfile-syntax",
-    // Terraform
     "4ops.terraform",
     "hashicorp.terraform",
+    "skyapps.fish-vscode",
+    "lunaryorn.fish-ide"
   ],
   // List of extensions recommended by VS Code that should not be recommended for users of this workspace.
   "unwantedRecommendations": []

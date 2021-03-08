@@ -62,8 +62,6 @@ brew install --cask \
   docker \
   datagrip \
   firefox \
-  font-fira-code \
-  font-hack-nerd-font \
   google-chrome \
   gpg-suite \
   intellij-idea \
