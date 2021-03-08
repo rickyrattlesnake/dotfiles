@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 brew update
 brew tap homebrew/cask-fonts
 
@@ -25,13 +27,13 @@ brew install \
   jq \
   kubernetes-cli \
   lastpass-cli \
+  libpql \
   mitmproxy \
   newman \
   nmap \
   nvm \
   p7zip \
   postgresql \
-  python@2 \
   python2 \
   python3 \
   rbenv \
@@ -57,13 +59,13 @@ brew install --cask \
   bloomrpc \
   calibre \
   charles \
+  docker \
   datagrip \
   firefox \
   font-fira-code \
   font-hack-nerd-font \
   google-chrome \
   gpg-suite \
-  gpg-suite-no-mail \
   intellij-idea \
   iterm2 \
   jprofiler \

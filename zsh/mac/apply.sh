@@ -1,12 +1,14 @@
-#!/usr/local/bin/zsh
+#!/bin/zsh
+
+echo "copy settings"
 cp ./.zshrc ~/
 cp ./.zshrc.* ~/
 cp ./.zsh_plugins.txt ~/
 cp ./antibody-bundle.sh ~/
 
-# run antibody 
+echo "run antibody"
 chmod 700 ~/antibody-bundle.sh
 ~/antibody-bundle.sh
 
-# powerlevel10k
-cp ~/.p10k.zsh
+echo "copy powerlevel10k"
+cp ./.p10k.zsh ~/.p10k.zsh
