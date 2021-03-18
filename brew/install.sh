@@ -2,11 +2,11 @@
 
 set -e
 
+echo "updating homebrew..."
 brew update
-brew tap homebrew/cask-fonts
 
-brew install \
-  ansible \
+echo "installing cli packages ..."
+brew install ansible \
   antibody \
   automake \
   aws-okta \
@@ -27,49 +27,43 @@ brew install \
   jq \
   kubernetes-cli \
   lastpass-cli \
-  libpql \
+  libpq \
   mitmproxy \
   newman \
   nmap \
   nvm \
   p7zip \
   postgresql \
-  python2 \
-  python3 \
+  python \
   rbenv \
   rename \
   rustup-init \
   stern \
-  terraform \
   terraform-docs \
   tfenv \
   the_silver_searcher \
   tree \
-  unrar \
   watch \
   watchman \
   yarn \
   yq \
   zsh
 
-brew install --cask \
-  1password \
+echo "installing casks packages ..."
+brew install --cask 1password \
   aws-vpn-client \
   balenaetcher \
   bloomrpc \
   calibre \
   charles \
   docker \
-  datagrip \
   firefox \
   google-chrome \
   gpg-suite \
   intellij-idea \
   iterm2 \
-  jprofiler \
   kap \
   keka \
-  mplayerx \
   ngrok \
   postman \
   signal \
@@ -80,11 +74,7 @@ brew install --cask \
   virtualbox \
   visual-studio-code \
   vlc \
-  wireshark \
-  xee
+  wireshark
 
-# AWS
-pip3 install awscli --upgrade --user
-
-##
+echo "additional configurations cli packages ..."
 $(brew --prefix)/opt/fzf/install

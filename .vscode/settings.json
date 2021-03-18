@@ -90,7 +90,7 @@
   "typescript.updateImportsOnFileMove.enabled": "always",
   "window.title": "${activeEditorMedium}${separator}${rootName}",
   "window.zoomLevel": 0,
-  "workbench.colorTheme": "Material Theme Ocean",
+  "workbench.colorTheme": "Aurora X",
   "files.trimTrailingWhitespace": true,
   "git.enableSmartCommit": true,
   "[yaml]": {
