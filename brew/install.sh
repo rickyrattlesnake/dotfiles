@@ -11,6 +11,7 @@ brew install ansible \
   automake \
   aws-okta \
   awscli \
+  bat \
   bufbuild/buf/buf \
   cmake \
   fd \
@@ -22,12 +23,16 @@ brew install ansible \
   gpg \
   graphviz \
   guetzli \
+  htop \
+  httpie \
   imagemagick \
   jmeter \
   jq \
   kubernetes-cli \
   lastpass-cli \
   libpq \
+  magic-wormhole \
+  m-cli \
   mitmproxy \
   newman \
   nmap \
@@ -37,8 +42,10 @@ brew install ansible \
   python \
   rbenv \
   rename \
+  ripgrep \
   rustup-init \
   stern \
+  sdkman \
   terraform-docs \
   tfenv \
   the_silver_searcher \

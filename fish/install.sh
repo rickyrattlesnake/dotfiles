@@ -12,4 +12,5 @@ curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 fisher install jethrokuan/z \
   PatrickF1/fzf.fish \
   FabioAntunes/fish-nvm \
-  edc/bass
+  edc/bass \
+  reitzig/sdkman-for-fish@v1.4.0
