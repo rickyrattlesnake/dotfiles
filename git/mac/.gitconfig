@@ -1,88 +1,84 @@
-[alias]
-lalias = "!git config -l | grep alias | cut -c 7-"
-s = status
-co = checkout
-
-ls = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
-ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
-lf = log -u
-tree = log --graph --decorate --pretty=oneline --abbrev-commit
-
-# commit
-ci = commit
-ac = "!git add -A && git commit"
-acp = "!f() { git add -A && git commit -m \"${1-wip}\" && git push; }; f"
-
-# fetch
-fa = fetch --all -p
-
-# push
-pf = push --force-with-lease
-po = "!f() { git push -u origin $(git rev-parse --abbrev-ref HEAD); }; f"
-
-# pull, rebase
-pl = pull
-rbi = rebase -i
-rbi-master = "!git fetch --all -p && git rebase -i origin/master"
-rbc = rebase --continue
-rba = rebase --abort
-
-# stash
-shl = stash show
-shs = stash save
-shp = stash pop
-
-# branch
-br = branch -a -v
-b = rev-parse --abbrev-ref HEAD
-delete-branches = "git branch | grep -v "master" | xargs git branch -D"
-delete-remote-branch = "!f() { git push origin \":$1\"; git branch -D \"$1\"; }; f"
-
-# diff
-files = "!f() { git diff --name-status \"$1^\" \"$1\"; }; f"
-
-diff = diff --word-diff
-dd = difftool --dir-diff --cached
-
-[commit]
-# gpgsign = true
-[core]
-symlinks = false
-autocrlf = input
-fscache = true
-[push]
-default = upstream
-[pull]
-rebase = true
-[branch]
-autosetupmerge = false
-autosetuprebase = "always"
-[url "ssh://git@github.com/"]
-insteadOf = https://github.com/
-[diff]
-tool = meld
-renames = copies
-mnemonicprefix = true
-[difftool]
-prompt = false
-[difftool "meld"]
-cmd = meld "$LOCAL" "$REMOTE"
-[merge]
-tool = meld
-[mergetool "meld"]
-cmd = meld "$LOCAL" "$BASE" "$REMOTE" --output "$MERGED"
-keepBackup = false
 [advice]
-statusHints = false
-pushNonFastForward = false
-[user]
-email = ricky.ratnayake@gmail.com
-name = rickyrattlesnake
-# signinkey = 7819E4CF
+  statusHints = false
+  pushNonFastForward = false
+[alias]
+  # Add, Commit, Push (forcefully): pass in a commit message as the first argument.
+  acp = "!f() { git add -A && git commit -m \"wip:${1-wip}\" && git push --force-with-lease; }; f"
+  aliases = config --get-regexp alias
+  b = rev-parse --abbrev-ref HEAD
+  br = branch -av
+  co = checkout
+  # Switch to a branch, creating it if necessary
+	go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
+  dd = difftool --dir-diff --cached
+  delete-branches = "git branch | grep -v "master" | xargs git branch -D"
+  delete-remote-branch = "!f() { git push origin \":$1\"; git branch -D \"$1\"; }; f"
+  # Show the diff between the latest commit and the current state
+	d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
+  fa = fetch --all -p
+  files = "!f() { git diff --name-status \"$1^\" \"$1\"; }; f"
+  lf = log -u
+  ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+  ls = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+  pf = push --force-with-lease
+  pl = pull
+  po = "!f() { git push -u origin $(git rev-parse --abbrev-ref HEAD); }; f"
+  rba = rebase --abort
+  rbc = rebase --continue
+  # Interactive rebase with the given number of latest commits
+	rbn = "!r() { git rebase -i HEAD~$1; }; r"
+  rbi = rebase -i
+  # Interactive rebase with origin/master
+  rbi-master = "!git fetch --all -p && git rebase -i origin/master"
+	s = status -s
+  stp = stash pop
+  sts = stash save
+[branch]
+  autosetupmerge = false
+  autosetuprebase = "always"
 [color]
-diff = auto
-status = auto
-branch = auto
-interactive = true
+  diff = auto
+  status = auto
+  branch = auto
+  interactive = true
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold # line info
+	old = red # deletions
+	new = green # additions
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+[commit]
+  # gpgsign = true
+[core]
+  symlinks = false
+  autocrlf = input
+  fscache = true
+[diff]
+	# Detect copies as well as renames
+	renames = copies
+[diff "bin"]
+	# Use `hexdump` to diff binary files
+	textconv = hexdump -v -C
 [help]
-format = html
+  format = html
+  # Automatically correct and execute mistyped commands
+	autocorrect = 1
+[pull]
+  rebase = true
+[push]
+  default = upstream
+  # Make `git push` push relevant annotated tags when pushing branches out.
+	followTags = true
+[url "ssh://git@github.com/"]
+  insteadOf = https://github.com/
+[user]
+  email = ricky.ratnayake@gmail.com
+  name = rickyrattlesnake
+  # signinkey = 7819E4CF

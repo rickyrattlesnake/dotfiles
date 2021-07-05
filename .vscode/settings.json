@@ -9,7 +9,6 @@
   "editor.showFoldingControls": "always",
   "editor.snippetSuggestions": "top",
   "editor.tabSize": 2,
-  "editor.formatOnSaveTimeout": 1500,
   "emmet.showSuggestionsAsSnippets": true,
   "emmet.syntaxProfiles": {
     "javascript": "jsx",
@@ -36,8 +35,6 @@
   "git.autofetch": true,
   "git.confirmSync": false,
   "gitlens.codeLens.enabled": false,
-  "javascript.implicitProjectConfig.experimentalDecorators": true,
-  // "jest.autoEnable": false,
   "launch": {
     "compounds": [],
     "configurations": [
@@ -71,22 +68,11 @@
   "[ruby]": {
     "editor.formatOnSave": false
   },
-  "ruby.format": "rubocop",
-  "ruby.lint": {
-    "rubocop": {
-      "useBundler": true
-    }
-  },
-  "ruby.lintDebounceTime": 500,
-  "ruby.intellisense": "rubyLocate",
-  "ruby.useBundler": true,
-  "ruby.useLanguageServer": true,
   "scss.lint.argumentsInColorFunction": "ignore",
   "scss.lint.hexColorLength": "ignore",
-  "solargraph.formatting": true,
   "terminal.integrated.fontFamily": "monospace",
-  "terminal.integrated.shell.linux": "/usr/local/bin/zsh",
-  "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
+  "terminal.integrated.shell.linux": "/usr/local/bin/fish",
+  "terminal.integrated.shell.osx": "/usr/local/bin/fish",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "window.title": "${activeEditorMedium}${separator}${rootName}",
   "window.zoomLevel": 0,
@@ -127,16 +113,10 @@
     "editor.formatOnSave": false,
     "editor.defaultFormatter": "ms-azuretools.vscode-docker"
   },
-  "[markdown]": {
-    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
-  },
   "[makefile]": {
     "editor.insertSpaces": false,
     "editor.tabSize": 2,
     "editor.renderWhitespace": "boundary"
   },
-  "editor.renderWhitespace": "none",
-  "java.configuration.checkProjectSettingsExclusions": false,
-  "typescriptHero.imports.disableImportsSorting": true,
-  "typescriptHero.imports.organizeOnSave": true
+  "editor.renderWhitespace": "none"
 }

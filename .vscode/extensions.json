@@ -22,7 +22,8 @@
     "4ops.terraform",
     "hashicorp.terraform",
     "skyapps.fish-vscode",
-    "lunaryorn.fish-ide"
+    "lunaryorn.fish-ide",
+    "yzhang.markdown-all-in-one"
   ],
   // List of extensions recommended by VS Code that should not be recommended for users of this workspace.
   "unwantedRecommendations": []
