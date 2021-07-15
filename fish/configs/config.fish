@@ -4,4 +4,11 @@ if type -q starship
 end
 
 ## Add sbin required for some brew installs
-fish_add_path /usr/local/sbin
+if test -d /usr/local/sbin
+    fish_add_path -a /usr/local/sbin
+end
+
+## Add sbin required for kube aliases
+if test -d ~/.kube/commands
+    fish_add_path -a ~/.kube/commands
+end
