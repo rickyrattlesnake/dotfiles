@@ -6,12 +6,13 @@ SETUVAR Z_DATA:/Users/rickyratnayake/\x2elocal/share/z/data
 SETUVAR Z_DATA_DIR:/Users/rickyratnayake/\x2elocal/share/z
 SETUVAR Z_EXCLUDE:\x5e/Users/rickyratnayake\x24
 SETUVAR __fish_initialized:3100
+SETUVAR _fisher_2m_2F_fish_2D_history_2D_merge_files:/Users/rickyratnayake/\x2econfig/fish/functions/up\x2dor\x2dsearch\x2efish
 SETUVAR _fisher_FabioAntunes_2F_fish_2D_nvm_files:/Users/rickyratnayake/\x2econfig/fish/functions/__nvm_run\x2efish\x1e/Users/rickyratnayake/\x2econfig/fish/functions/node\x2efish\x1e/Users/rickyratnayake/\x2econfig/fish/functions/npm\x2efish\x1e/Users/rickyratnayake/\x2econfig/fish/functions/npx\x2efish\x1e/Users/rickyratnayake/\x2econfig/fish/functions/nvm\x2efish\x1e/Users/rickyratnayake/\x2econfig/fish/functions/nvm_alias_command\x2efish\x1e/Users/rickyratnayake/\x2econfig/fish/functions/nvm_alias_function\x2efish\x1e/Users/rickyratnayake/\x2econfig/fish/functions/yarn\x2efish\x1e/Users/rickyratnayake/\x2econfig/fish/completions/nvm\x2efish
 SETUVAR _fisher_PatrickF1_2F_fzf_2E_fish_files:/Users/rickyratnayake/\x2econfig/fish/functions/__fzf_extract_var_info\x2efish\x1e/Users/rickyratnayake/\x2econfig/fish/functions/__fzf_preview_file\x2efish\x1e/Users/rickyratnayake/\x2econfig/fish/functions/__fzf_report_file_type\x2efish\x1e/Users/rickyratnayake/\x2econfig/fish/functions/__fzf_search_current_dir\x2efish\x1e/Users/rickyratnayake/\x2econfig/fish/functions/__fzf_search_git_log\x2efish\x1e/Users/rickyratnayake/\x2econfig/fish/functions/__fzf_search_git_status\x2efish\x1e/Users/rickyratnayake/\x2econfig/fish/functions/__fzf_search_history\x2efish\x1e/Users/rickyratnayake/\x2econfig/fish/functions/__fzf_search_shell_variables\x2efish\x1e/Users/rickyratnayake/\x2econfig/fish/conf\x2ed/fzf\x2efish
 SETUVAR _fisher_edc_2F_bass_files:/Users/rickyratnayake/\x2econfig/fish/functions/__bass\x2epy\x1e/Users/rickyratnayake/\x2econfig/fish/functions/bass\x2efish
 SETUVAR _fisher_jethrokuan_2F_z_files:/Users/rickyratnayake/\x2econfig/fish/functions/__z\x2efish\x1e/Users/rickyratnayake/\x2econfig/fish/functions/__z_add\x2efish\x1e/Users/rickyratnayake/\x2econfig/fish/functions/__z_clean\x2efish\x1e/Users/rickyratnayake/\x2econfig/fish/functions/__z_complete\x2efish\x1e/Users/rickyratnayake/\x2econfig/fish/conf\x2ed/z\x2efish
 SETUVAR _fisher_jorgebucaran_2F_fisher_files:/Users/rickyratnayake/\x2econfig/fish/functions/fisher\x2efish\x1e/Users/rickyratnayake/\x2econfig/fish/completions/fisher\x2efish
-SETUVAR _fisher_plugins:jorgebucaran/fisher\x1ejethrokuan/z\x1ePatrickF1/fzf\x2efish\x1eFabioAntunes/fish\x2dnvm\x1eedc/bass\x1ereitzig/sdkman\x2dfor\x2dfish\x40v1\x2e4\x2e0
+SETUVAR _fisher_plugins:jorgebucaran/fisher\x1ejethrokuan/z\x1ePatrickF1/fzf\x2efish\x1eFabioAntunes/fish\x2dnvm\x1eedc/bass\x1ereitzig/sdkman\x2dfor\x2dfish\x40v1\x2e4\x2e0\x1e2m/fish\x2dhistory\x2dmerge
 SETUVAR _fisher_reitzig_2F_sdkman_2D_for_2D_fish_40_v1_2E_34_2E_30__files:/Users/rickyratnayake/\x2econfig/fish/functions/sdk\x2efish\x1e/Users/rickyratnayake/\x2econfig/fish/conf\x2ed/sdk\x2efish\x1e/Users/rickyratnayake/\x2econfig/fish/completions/sdk\x2efish
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
 SETUVAR fish_color_cancel:\x2dr
@@ -40,4 +41,4 @@ SETUVAR fish_pager_color_completion:\x1d
 SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
-SETUVAR fish_user_paths:/usr/local/opt/fzf/bin
+SETUVAR fish_user_paths:/usr/local/sbin\x1e/usr/local/opt/fzf/bin
