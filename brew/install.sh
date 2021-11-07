@@ -58,6 +58,7 @@ brew install ansible \
 
 echo "installing casks packages ..."
 brew install --cask 1password \
+  alfred \
   aws-vpn-client \
   balenaetcher \
   bloomrpc \
