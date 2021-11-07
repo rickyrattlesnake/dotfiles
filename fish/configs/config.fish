@@ -12,3 +12,9 @@ end
 if test -d ~/.kube/commands
     fish_add_path -a ~/.kube/commands
 end
+
+# init ruby
+status --is-interactive; and source (rbenv init -|psub)
+
+# init rust
+set -U fish_user_paths $HOME/.cargo/bin $fish_user_paths
