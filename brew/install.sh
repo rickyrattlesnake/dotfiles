@@ -12,9 +12,11 @@ brew install ansible \
   aws-okta \
   awscli \
   bat \
+  btop \
   bufbuild/buf/buf \
   cmake \
   fd \
+  fish \
   ffmpeg \
   fzf \
   git \
@@ -45,7 +47,6 @@ brew install ansible \
   ripgrep \
   rustup-init \
   stern \
-  sdkman \
   terraform-docs \
   tfenv \
   the_silver_searcher \
@@ -82,8 +83,7 @@ brew install --cask 1password \
   virtualbox \
   visual-studio-code \
   vlc \
-  wireshark \
-  btop
+  wireshark
 
 echo "additional configurations cli packages ..."
 $(brew --prefix)/opt/fzf/install
