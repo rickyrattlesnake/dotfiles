@@ -15,6 +15,7 @@ brew install ansible \
   btop \
   bufbuild/buf/buf \
   cmake \
+  direnv \
   fd \
   fish \
   ffmpeg \
