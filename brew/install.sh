@@ -50,7 +50,6 @@ brew install ansible \
   stern \
   terraform-docs \
   tfenv \
-  the_silver_searcher \
   tree \
   watch \
   watchman \
