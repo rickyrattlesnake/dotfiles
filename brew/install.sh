@@ -5,6 +5,15 @@ set -e
 echo "updating homebrew..."
 brew update
 
+echo "installing programming languages..."
+brew install rust
+
+echo "installing modern cli tools ..."
+brew install bat \
+  btop \
+  exa \
+  broot
+
 echo "installing cli packages ..."
 brew install ansible \
   antibody \
@@ -12,7 +21,6 @@ brew install ansible \
   aws-okta \
   awscli \
   bat \
-  btop \
   bufbuild/buf/buf \
   cmake \
   direnv \
