@@ -23,10 +23,8 @@ if test -d ~/.kube/commands
     fish_add_path -a ~/.kube/commands
 end
 
-## Enable fzf.fish bindings
-## https://github.com/PatrickF1/fzf.fish
-fzf_configure_bindings
-
 fish_add_path $HOME/.cargo/bin
 fish_add_path /usr/local/opt/tcl-tk/bin
 fish_add_path /usr/local/opt/llvm/bin
+set -gx VOLTA_HOME "$HOME/.volta"
+set -gx PATH "$VOLTA_HOME/bin" $PATH
