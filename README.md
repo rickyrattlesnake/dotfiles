@@ -1,9 +1,4 @@
-## Pre-Requisites Downloads
+## Cheat sheet
 
-- powerline fonts
-
-## Pre-configurations
-
-- change location of .bashrc
-- change location of .zshrc
-- change location of .gitcongif
+`shift + ->` and `shift + <-` move one word left of right, ignoring punctuation
+`alt + ->` and `alt + <-` move one word left of right

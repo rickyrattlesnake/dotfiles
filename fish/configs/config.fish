@@ -23,6 +23,10 @@ if test -d ~/.kube/commands
     fish_add_path -a ~/.kube/commands
 end
 
+## Enable fzf.fish bindings
+## https://github.com/PatrickF1/fzf.fish
+fzf_configure_bindings
+
 fish_add_path $HOME/.cargo/bin
 fish_add_path /usr/local/opt/tcl-tk/bin
 fish_add_path /usr/local/opt/llvm/bin
