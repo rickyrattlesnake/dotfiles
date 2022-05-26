@@ -86,6 +86,7 @@ brew install --cask 1password \
     signal \
     spectacle \
     spotify \
+    todoist \
     transmission \
     tunnelblick \
     visual-studio-code \

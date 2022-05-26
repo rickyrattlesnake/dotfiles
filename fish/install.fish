@@ -1,4 +1,4 @@
-#!/usr/local/bin/fish
+#!/opt/homebrew/bin/fish
 
 echo "Setup shell defaults"
 echo /usr/local/bin/fish | sudo tee -a /etc/shells
