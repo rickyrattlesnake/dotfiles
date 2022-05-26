@@ -23,8 +23,13 @@ if test -d ~/.kube/commands
     fish_add_path -a ~/.kube/commands
 end
 
+## Add m1 homebrew default install path
+if test -d /opt/homebrew/bin
+    fish_add_path -p /opt/homebrew/bin
+end
+
 fish_add_path $HOME/.cargo/bin
-fish_add_path /usr/local/opt/tcl-tk/bin
-fish_add_path /usr/local/opt/llvm/bin
+# fish_add_path /usr/local/opt/tcl-tk/bin
+# fish_add_path /usr/local/opt/llvm/bin
 set -gx VOLTA_HOME "$HOME/.volta"
 set -gx PATH "$VOLTA_HOME/bin" $PATH
