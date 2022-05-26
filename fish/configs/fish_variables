@@ -2,14 +2,15 @@
 # VERSION: 3.0
 SETUVAR ZO_CMD:zo
 SETUVAR Z_CMD:z
-SETUVAR Z_DATA:/Users/rickyrattlesnake/\x2elocal/share/z/data
-SETUVAR Z_DATA_DIR:/Users/rickyrattlesnake/\x2elocal/share/z
-SETUVAR Z_EXCLUDE:\x5e/Users/rickyrattlesnake\x24
+SETUVAR Z_DATA:/Users/ricky\x2eratnayake/\x2elocal/share/z/data
+SETUVAR Z_DATA_DIR:/Users/ricky\x2eratnayake/\x2elocal/share/z
+SETUVAR Z_EXCLUDE:\x5e/Users/ricky\x2eratnayake\x24
 SETUVAR __fish_initialized:3400
-SETUVAR _fisher_PatrickF1_2F_fzf_2E_fish_files:/Users/rickyrattlesnake/\x2econfig/fish/functions/_fzf_configure_bindings_help\x2efish\x1e/Users/rickyrattlesnake/\x2econfig/fish/functions/_fzf_extract_var_info\x2efish\x1e/Users/rickyrattlesnake/\x2econfig/fish/functions/_fzf_preview_file\x2efish\x1e/Users/rickyrattlesnake/\x2econfig/fish/functions/_fzf_report_file_type\x2efish\x1e/Users/rickyrattlesnake/\x2econfig/fish/functions/_fzf_search_directory\x2efish\x1e/Users/rickyrattlesnake/\x2econfig/fish/functions/_fzf_search_git_log\x2efish\x1e/Users/rickyrattlesnake/\x2econfig/fish/functions/_fzf_search_git_status\x2efish\x1e/Users/rickyrattlesnake/\x2econfig/fish/functions/_fzf_search_history\x2efish\x1e/Users/rickyrattlesnake/\x2econfig/fish/functions/_fzf_search_processes\x2efish\x1e/Users/rickyrattlesnake/\x2econfig/fish/functions/_fzf_search_variables\x2efish\x1e/Users/rickyrattlesnake/\x2econfig/fish/functions/_fzf_wrapper\x2efish\x1e/Users/rickyrattlesnake/\x2econfig/fish/functions/fzf_configure_bindings\x2efish\x1e/Users/rickyrattlesnake/\x2econfig/fish/conf\x2ed/fzf\x2efish\x1e/Users/rickyrattlesnake/\x2econfig/fish/completions/fzf_configure_bindings\x2efish
-SETUVAR _fisher_jethrokuan_2F_z_files:/Users/rickyrattlesnake/\x2econfig/fish/functions/__z\x2efish\x1e/Users/rickyrattlesnake/\x2econfig/fish/functions/__z_add\x2efish\x1e/Users/rickyrattlesnake/\x2econfig/fish/functions/__z_clean\x2efish\x1e/Users/rickyrattlesnake/\x2econfig/fish/functions/__z_complete\x2efish\x1e/Users/rickyrattlesnake/\x2econfig/fish/conf\x2ed/z\x2efish
-SETUVAR _fisher_jorgebucaran_2F_fisher_files:/Users/rickyrattlesnake/\x2econfig/fish/functions/fisher\x2efish\x1e/Users/rickyrattlesnake/\x2econfig/fish/completions/fisher\x2efish
-SETUVAR _fisher_plugins:jorgebucaran/fisher\x1ejethrokuan/z\x1ePatrickF1/fzf\x2efish
+SETUVAR _fisher_PatrickF1_2F_fzf_2E_fish_files:/Users/ricky\x2eratnayake/\x2econfig/fish/functions/_fzf_configure_bindings_help\x2efish\x1e/Users/ricky\x2eratnayake/\x2econfig/fish/functions/_fzf_extract_var_info\x2efish\x1e/Users/ricky\x2eratnayake/\x2econfig/fish/functions/_fzf_preview_file\x2efish\x1e/Users/ricky\x2eratnayake/\x2econfig/fish/functions/_fzf_report_file_type\x2efish\x1e/Users/ricky\x2eratnayake/\x2econfig/fish/functions/_fzf_search_directory\x2efish\x1e/Users/ricky\x2eratnayake/\x2econfig/fish/functions/_fzf_search_git_log\x2efish\x1e/Users/ricky\x2eratnayake/\x2econfig/fish/functions/_fzf_search_git_status\x2efish\x1e/Users/ricky\x2eratnayake/\x2econfig/fish/functions/_fzf_search_history\x2efish\x1e/Users/ricky\x2eratnayake/\x2econfig/fish/functions/_fzf_search_processes\x2efish\x1e/Users/ricky\x2eratnayake/\x2econfig/fish/functions/_fzf_search_variables\x2efish\x1e/Users/ricky\x2eratnayake/\x2econfig/fish/functions/_fzf_wrapper\x2efish\x1e/Users/ricky\x2eratnayake/\x2econfig/fish/functions/fzf_configure_bindings\x2efish\x1e/Users/ricky\x2eratnayake/\x2econfig/fish/conf\x2ed/fzf\x2efish\x1e/Users/ricky\x2eratnayake/\x2econfig/fish/completions/fzf_configure_bindings\x2efish
+SETUVAR _fisher_edc_2F_bass_files:/Users/ricky\x2eratnayake/\x2econfig/fish/functions/__bass\x2epy\x1e/Users/ricky\x2eratnayake/\x2econfig/fish/functions/bass\x2efish
+SETUVAR _fisher_jethrokuan_2F_z_files:/Users/ricky\x2eratnayake/\x2econfig/fish/functions/__z\x2efish\x1e/Users/ricky\x2eratnayake/\x2econfig/fish/functions/__z_add\x2efish\x1e/Users/ricky\x2eratnayake/\x2econfig/fish/functions/__z_clean\x2efish\x1e/Users/ricky\x2eratnayake/\x2econfig/fish/functions/__z_complete\x2efish\x1e/Users/ricky\x2eratnayake/\x2econfig/fish/conf\x2ed/z\x2efish
+SETUVAR _fisher_jorgebucaran_2F_fisher_files:/Users/ricky\x2eratnayake/\x2econfig/fish/functions/fisher\x2efish\x1e/Users/ricky\x2eratnayake/\x2econfig/fish/completions/fisher\x2efish
+SETUVAR _fisher_plugins:jorgebucaran/fisher\x1ejethrokuan/z\x1ePatrickF1/fzf\x2efish\x1eedc/bass
 SETUVAR fish_color_autosuggestion:BD93F9
 SETUVAR fish_color_cancel:\x2d\x2dreverse
 SETUVAR fish_color_command:F8F8F2
@@ -39,4 +40,4 @@ SETUVAR fish_pager_color_description:B3A06D
 SETUVAR fish_pager_color_prefix:normal\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_pager_color_selected_background:\x2d\x2dbackground\x3dbrblack
-SETUVAR fish_user_paths:/Users/rickyrattlesnake/\x2ecargo/bin\x1e/usr/local/opt/llvm/bin\x1e/usr/local/opt/tcl\x2dtk/bin\x1e/usr/local/sbin\x1e/usr/local/opt/fzf/bin
+SETUVAR fish_user_paths:/opt/homebrew/bin\x1e/opt/homebrew/opt/fzf/bin

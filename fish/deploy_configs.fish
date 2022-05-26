@@ -1,4 +1,4 @@
-#!/usr/local/bin/fish
+#!/opt/homebrew/bin/fish
 
 set user_snippets_dir ~/.config/fish/conf.d/
 set user_config ~/.config/fish/
