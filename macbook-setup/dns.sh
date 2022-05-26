@@ -14,7 +14,6 @@ all_dns_servers=($cloudflare_ipv4 $cloudflare_ipv4_alt $cloudflare_ipv6 $cloudfl
 
 # set dns servers to cloudflare and google
 networksetup -setdnsservers Wi-Fi $all_dns_addresses
-networksetup -setdnsservers WorkVPN $all_dns_addresses
 
 #reset dns resolver
 sudo killall -HUP mDNSResponder

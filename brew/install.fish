@@ -1,4 +1,4 @@
-#!/local/bin/fish
+#!/opt/homebrew/bin/fish
 
 echo "updating homebrew..."
 brew update
@@ -88,7 +88,6 @@ brew install --cask 1password \
     spotify \
     transmission \
     tunnelblick \
-    virtualbox \
     visual-studio-code \
     vlc \
     wireshark

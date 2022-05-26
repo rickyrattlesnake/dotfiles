@@ -71,12 +71,11 @@
   "scss.lint.argumentsInColorFunction": "ignore",
   "scss.lint.hexColorLength": "ignore",
   "terminal.integrated.fontFamily": "monospace",
-  "terminal.integrated.shell.linux": "/usr/local/bin/fish",
-  "terminal.integrated.shell.osx": "/usr/local/bin/fish",
+  "terminal.integrated.defaultProfile.linux": "fish",
+  "terminal.integrated.defaultProfile.osx": "fish",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "window.title": "${activeEditorMedium}${separator}${rootName}",
   "window.zoomLevel": 0,
-  "workbench.colorTheme": "Aurora X",
   "files.trimTrailingWhitespace": true,
   "git.enableSmartCommit": true,
   "[yaml]": {
@@ -88,7 +87,6 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[NGINX]": {},
-  "terminal.integrated.rendererType": "dom",
   "workbench.iconTheme": "vs-seti",
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
