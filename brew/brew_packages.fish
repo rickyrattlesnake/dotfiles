@@ -92,6 +92,3 @@ brew install --cask 1password \
     visual-studio-code \
     vlc \
     wireshark
-
-echo "additional configurations cli packages ..."
-# $(brew --prefix)/opt/fzf/install

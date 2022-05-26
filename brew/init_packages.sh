@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Install Xcode ..."
-xcode-select –install
+xcode-select -install
 # Or manually from https://developer.apple.com/download/all/
 
 echo "Install brew ..."
@@ -10,7 +10,7 @@ echo "Install brew ..."
 echo "Install sdkman ..."
 curl -s "https://get.sdkman.io" | bash
 
-echo "Install fish ..."
+echo "Install fish shell ..."
 brew install fish
 
 echo "Install fisher ..."
