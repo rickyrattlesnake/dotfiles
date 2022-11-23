@@ -1,10 +1,8 @@
 {
   "editor.detectIndentation": false,
-  "editor.foldingStrategy": "indentation",
-  "editor.fontFamily": "FiraCode Nerd Font, Fira Code, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontFamily": "Dank Mono, FiraCode Nerd Font, Fira Code, Menlo, Monaco, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "editor.fontSize": 14,
-  "editor.formatOnSave": true,
   "editor.minimap.enabled": false,
   "editor.showFoldingControls": "always",
   "editor.snippetSuggestions": "top",
@@ -21,7 +19,9 @@
     "*.cpt": "gauge",
     "*.spec": "gauge",
     "*.yaml.*": "yaml",
-    "Makefile.*": "makefile"
+    "Makefile.*": "makefile",
+    ".envrc": "dotenv",
+    "*.html": "html"
   },
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
@@ -39,47 +39,32 @@
     "compounds": [],
     "configurations": [
       {
-        "console": "integratedTerminal",
-        "disableOptimisticBPs": true,
-        "internalConsoleOptions": "neverOpen",
-        "name": "Jest Current File",
-        "port": 9301,
+        "type": "node",
         "request": "launch",
-        "runtimeArgs": [
-          "--inspect=9301",
-          "${workspaceRoot}/node_modules/.bin/jest",
-          "--runInBand",
-          "--no-cache",
-          "--no-watch",
-          "${relativeFile}"
-        ],
-        "runtimeExecutable": "/Users/rickyratnayake/.nvm/versions/node/v12.14.0/bin/node",
-        "type": "node"
+        "name": "node:launch:debug",
+        "runtimeExecutable": "yarn",
+        "cwd": "${workspaceFolder}",
+        "runtimeArgs": ["dev:debug"],
+        "skipFiles": ["<node_internals>/**"],
+        "port": 9229
       },
       {
         "internalConsoleOptions": "neverOpen",
-        "name": "Node Server Attach",
+        "name": "node:attach",
         "port": 9229,
         "request": "attach",
         "type": "node"
       }
     ]
   },
-  "[ruby]": {
-    "editor.formatOnSave": false
-  },
   "scss.lint.argumentsInColorFunction": "ignore",
   "scss.lint.hexColorLength": "ignore",
-  "terminal.integrated.fontFamily": "monospace",
-  "terminal.integrated.defaultProfile.linux": "fish",
-  "terminal.integrated.defaultProfile.osx": "fish",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "window.title": "${activeEditorMedium}${separator}${rootName}",
-  "window.zoomLevel": 0,
   "files.trimTrailingWhitespace": true,
   "git.enableSmartCommit": true,
   "[yaml]": {
-    "editor.formatOnSave": false,
+    "editor.formatOnSave": true,
     "editor.formatOnType": false,
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
@@ -87,12 +72,13 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[NGINX]": {},
-  "workbench.iconTheme": "vs-seti",
+  "workbench.iconTheme": "material-icon-theme",
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
   },
   "diffEditor.ignoreTrimWhitespace": false,
   "javascript.updateImportsOnFileMove.enabled": "always",
@@ -116,5 +102,85 @@
     "editor.tabSize": 2,
     "editor.renderWhitespace": "boundary"
   },
-  "editor.renderWhitespace": "none"
+  "editor.renderWhitespace": "none",
+  "security.workspace.trust.untrustedFiles": "open",
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "cSpell.userWords": [
+    "behaviour",
+    "brighte",
+    "cakephp",
+    "codegen",
+    "codesniffer",
+    "contentlayer",
+    "entrypoints",
+    "Fastify",
+    "finpower",
+    "Freestanding",
+    "healthcheck",
+    "iframe",
+    "initialise",
+    "Localised",
+    "manypkg",
+    "microfrontends",
+    "Microservices",
+    "Oidc",
+    "pacticipant",
+    "phpcpd",
+    "phpcs",
+    "phpunit",
+    "plopfile",
+    "PORTALDB",
+    "typecheck",
+    "unrecognised",
+    "webroot"
+  ],
+  "[dotenv]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format",
+    "editor.formatOnSave": false
+  },
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format",
+    "editor.formatOnSave": false
+  },
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma",
+    "editor.formatOnSave": true
+  },
+  "git.mergeEditor": true,
+  "window.commandCenter": true,
+  "gitlens.hovers.currentLine.over": "line",
+  "terminal.integrated.profiles.osx": {
+    "bash": {
+      "path": "bash",
+      "args": ["-l"],
+      "icon": "terminal-bash"
+    },
+    "zsh": {
+      "path": "zsh",
+      "args": ["-l"]
+    },
+    "fish": {
+      "path": "/opt/homebrew/bin/fish",
+      "args": ["-l"]
+    },
+    "tmux": {
+      "path": "tmux",
+      "icon": "terminal-tmux"
+    },
+    "pwsh": {
+      "path": "pwsh",
+      "icon": "terminal-powershell"
+    }
+  },
+  "terminal.integrated.defaultProfile.windows": "fish",
+  "typescript.preferences.useAliasesForRenames": false,
+  "javascript.preferences.useAliasesForRenames": false,
+  "workbench.preferredDarkColorTheme": "One Dark Pro Darker",
+  "oneDarkPro.bold": true,
+  "oneDarkPro.vivid": true,
+  "workbench.colorTheme": "Noctis Obscuro",
+  "javascript.format.semicolons": "insert",
+  "typescript.format.semicolons": "insert",
+  "editor.inlineSuggest.enabled": true,
+  "yaml.format.singleQuote": true
 }
