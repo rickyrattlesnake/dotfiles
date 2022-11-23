@@ -56,6 +56,7 @@ brew install ansible \
     ripgrep \
     rustup-init \
     stern \
+    shellcheck \
     terraform-docs \
     tfenv \
     tree \

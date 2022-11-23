@@ -28,6 +28,9 @@ if test -d /opt/homebrew/bin
     fish_add_path -p /opt/homebrew/bin
 end
 
+## Set aws ca certificate to mozilla when installed by brew
+set -gx AWS_CA_BUNDLE $(brew --prefix)/etc/ca-certificates/cert.pem
+
 fish_add_path $HOME/.cargo/bin
 # fish_add_path /usr/local/opt/tcl-tk/bin
 # fish_add_path /usr/local/opt/llvm/bin
