@@ -76,7 +76,7 @@ defaults write com.apple.menuextra.clock "DateFormat" -string "\"EEE d MMM HH:mm
 ### Dock
 
 # Change icon size to 24 px
-defaults write com.apple.dock "tilesize" -int "24"
+defaults write com.apple.dock "tilesize" -int "48"
 # Turn off auto-hide
 defaults write com.apple.dock "autohide" -bool "false"
 # Do not show recent items

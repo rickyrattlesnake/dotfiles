@@ -178,9 +178,11 @@
   "workbench.preferredDarkColorTheme": "One Dark Pro Darker",
   "oneDarkPro.bold": true,
   "oneDarkPro.vivid": true,
-  "workbench.colorTheme": "Noctis Obscuro",
+  "workbench.colorTheme": "One Dark Pro Darker",
   "javascript.format.semicolons": "insert",
   "typescript.format.semicolons": "insert",
   "editor.inlineSuggest.enabled": true,
-  "yaml.format.singleQuote": true
+  "yaml.format.singleQuote": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs":"active"
 }

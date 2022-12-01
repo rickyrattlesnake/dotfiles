@@ -9,7 +9,6 @@
     "richie5um2.vscode-sort-json",
     "equinusocio.vsc-material-theme",
     "pkief.material-icon-theme",
-    "coenraads.bracket-pair-colorizer",
     "sidneys1.gitconfig",
     "eamodio.gitlens",
     "jeff-hykin.better-shellscript-syntax",
@@ -24,7 +23,8 @@
     "skyapps.fish-vscode",
     "lunaryorn.fish-ide",
     "yzhang.markdown-all-in-one",
-    "mikestead.dotenv"
+    "mikestead.dotenv",
+    "zhuangtongfa.material-theme"
   ],
   // List of extensions recommended by VS Code that should not be recommended for users of this workspace.
   "unwantedRecommendations": []

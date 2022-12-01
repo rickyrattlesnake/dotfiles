@@ -7,6 +7,11 @@ xcode-select -install
 echo "Install brew ..."
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+echo "Fire post install brew actions ..."
+echo '# Set PATH, MANPATH, etc., for Homebrew.' >> $HOME/.zprofile
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> $HOME/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 echo "Install sdkman ..."
 curl -s "https://get.sdkman.io" | bash
 
