@@ -24,7 +24,10 @@
     "lunaryorn.fish-ide",
     "yzhang.markdown-all-in-one",
     "mikestead.dotenv",
-    "zhuangtongfa.material-theme"
+    "zhuangtongfa.material-theme",
+    "prisma.prisma",
+    "GraphQL.vscode-graphql",
+    "tombonnike.vscode-status-bar-format-toggle",
   ],
   // List of extensions recommended by VS Code that should not be recommended for users of this workspace.
   "unwantedRecommendations": []
