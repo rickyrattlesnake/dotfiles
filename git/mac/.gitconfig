@@ -11,7 +11,7 @@
   # Switch to a branch, creating it if necessary
 	go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
   dd = difftool --dir-diff --cached
-  delete-branches = "git branch | grep -v "master" | xargs git branch -D"
+  delete-branches = "!f() { git branch | grep -vE \"(master|main|develop|uat)\" | xargs git branch -D ; }; f"
   delete-remote-branch = "!f() { git push origin \":$1\"; git branch -D \"$1\"; }; f"
   # Show the diff between the latest commit and the current state
 	d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
@@ -26,11 +26,13 @@
   rba = rebase --abort
   rbc = rebase --continue
   # Interactive rebase with the given number of latest commits
-	rbn = "!r() { git rebase -i HEAD~$1; }; r"
+  rbn = "!r() { git rebase -i HEAD~$1; }; r"
   rbi = rebase -i
   # Interactive rebase with origin/master
+  rbi-main = "!git fetch --all -p && git rebase -i origin/main"
   rbi-master = "!git fetch --all -p && git rebase -i origin/master"
-	s = status -s
+  rbi-develop = "!git fetch --all -p && git rebase -i origin/develop"
+  s = status -s
   stp = stash pop
   sts = stash save
 [branch]
@@ -81,3 +83,9 @@
 [user]
   email = ricky.ratnayake@gmail.com
   name = rickyrattlesnake
+[credential]
+	helper = cache --timeout 3600
+[credentials]
+	helper = osxkeychain
+[init]
+  defaultBranch = main

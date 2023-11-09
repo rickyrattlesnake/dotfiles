@@ -1,9 +1,64 @@
 {
+  "[NGINX]": {},
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker",
+    "editor.formatOnSave": false
+  },
+  "[dotenv]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format",
+    "editor.formatOnSave": false
+  },
+  "[ignore]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[makefile]": {
+    "editor.insertSpaces": false,
+    "editor.renderWhitespace": "boundary",
+    "editor.tabSize": 2
+  },
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma",
+    "editor.formatOnSave": true
+  },
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format",
+    "editor.formatOnSave": false
+  },
+  "[sql]": {
+    "editor.defaultFormatter": "adpyke.vscode-sql-formatter"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml",
+    "editor.formatOnSave": true,
+    "editor.formatOnType": false
+  },
+  "circleci.hostUrl": "",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.bracketPairColorization.enabled": true,
   "editor.detectIndentation": false,
   "editor.fontFamily": "Dank Mono, FiraCode Nerd Font, Fira Code, Menlo, Monaco, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "editor.fontSize": 14,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.inlineSuggest.enabled": true,
   "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "all",
   "editor.showFoldingControls": "always",
   "editor.snippetSuggestions": "top",
   "editor.tabSize": 2,
@@ -17,14 +72,19 @@
   },
   "files.associations": {
     "*.cpt": "gauge",
+    "*.html": "html",
     "*.spec": "gauge",
     "*.yaml.*": "yaml",
-    "Makefile.*": "makefile",
     ".envrc": "dotenv",
-    "*.html": "html"
+    "Makefile.*": "makefile",
+    "*.md": "markdown"
+  },
+  "files.exclude": {
+    "**/coverage": true
   },
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
   "files.watcherExclude": {
     "**/.git/objects/**": true,
     "**/.git/subtree-cache/**": true,
@@ -34,19 +94,28 @@
   },
   "git.autofetch": true,
   "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "git.mergeEditor": true,
   "gitlens.codeLens.enabled": false,
+  "gitlens.currentLine.enabled": false,
+  "gitlens.hovers.currentLine.over": "line",
+  "grammarly.config.documentDialect": "australian",
+  "javascript.format.semicolons": "insert",
+  "javascript.preferences.importModuleSpecifier": "relative",
+  "javascript.preferences.useAliasesForRenames": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "jest.autoRun": "off",
   "launch": {
     "compounds": [],
     "configurations": [
       {
-        "type": "node",
-        "request": "launch",
-        "name": "node:launch:debug",
-        "runtimeExecutable": "yarn",
         "cwd": "${workspaceFolder}",
+        "name": "node:launch:debug",
+        "request": "launch",
         "runtimeArgs": ["dev:debug"],
+        "runtimeExecutable": "yarn",
         "skipFiles": ["<node_internals>/**"],
-        "port": 9229
+        "type": "node"
       },
       {
         "internalConsoleOptions": "neverOpen",
@@ -54,135 +123,248 @@
         "port": 9229,
         "request": "attach",
         "type": "node"
+      },
+      {
+        "args": ["run", "${relativeFile}"],
+        "autoAttachChildProcesses": true,
+        "console": "integratedTerminal",
+        "name": "vitest:current-file",
+        "program": "${workspaceRoot}/node_modules/vitest/vitest.mjs",
+        "request": "launch",
+        "skipFiles": ["<node_internals>/**", "**/node_modules/**"],
+        "smartStep": true,
+        "type": "node"
+      },
+      {
+        "args": [
+          "${fileBasenameNoExtension}",
+          "--runInBand",
+          "--watch",
+          "--coverage=false",
+          "--no-cache"
+        ],
+        "console": "integratedTerminal",
+        "cwd": "${workspaceRoot}",
+        "internalConsoleOptions": "neverOpen",
+        "name": "Jest file",
+        "request": "launch",
+        "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/jest",
+        "sourceMaps": true,
+        "type": "pwa-node",
+        "windows": {
+          "program": "${workspaceFolder}/node_modules/jest/bin/jest"
+        }
       }
     ]
   },
+  "oneDarkPro.bold": true,
+  "oneDarkPro.vivid": true,
+  "playwright.reuseBrowser": true,
   "scss.lint.argumentsInColorFunction": "ignore",
   "scss.lint.hexColorLength": "ignore",
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "window.title": "${activeEditorMedium}${separator}${rootName}",
-  "files.trimTrailingWhitespace": true,
-  "git.enableSmartCommit": true,
-  "[yaml]": {
-    "editor.formatOnSave": true,
-    "editor.formatOnType": false,
-    "editor.defaultFormatter": "redhat.vscode-yaml"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[NGINX]": {},
-  "workbench.iconTheme": "material-icon-theme",
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true
-  },
-  "diffEditor.ignoreTrimWhitespace": false,
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "search.exclude": {
     "**/*.code-search": false
   },
-  "files.exclude": {
-    "**/coverage": true
-  },
-  "javascript.preferences.importModuleSpecifier": "relative",
-  "typescript.preferences.importModuleSpecifier": "relative",
-  "[dockerfile]": {
-    "editor.formatOnSave": false,
-    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
-  },
-  "[makefile]": {
-    "editor.insertSpaces": false,
-    "editor.tabSize": 2,
-    "editor.renderWhitespace": "boundary"
-  },
-  "editor.renderWhitespace": "none",
   "security.workspace.trust.untrustedFiles": "open",
-  "typescript.tsdk": "./node_modules/typescript/lib",
-  "cSpell.userWords": [
-    "behaviour",
-    "brighte",
-    "cakephp",
-    "codegen",
-    "codesniffer",
-    "contentlayer",
-    "entrypoints",
-    "Fastify",
-    "finpower",
-    "Freestanding",
-    "healthcheck",
-    "iframe",
-    "initialise",
-    "Localised",
-    "manypkg",
-    "microfrontends",
-    "Microservices",
-    "Oidc",
-    "pacticipant",
-    "phpcpd",
-    "phpcs",
-    "phpunit",
-    "plopfile",
-    "PORTALDB",
-    "typecheck",
-    "unrecognised",
-    "webroot"
-  ],
-  "[dotenv]": {
-    "editor.defaultFormatter": "foxundermoon.shell-format",
-    "editor.formatOnSave": false
-  },
-  "[shellscript]": {
-    "editor.defaultFormatter": "foxundermoon.shell-format",
-    "editor.formatOnSave": false
-  },
-  "[prisma]": {
-    "editor.defaultFormatter": "Prisma.prisma",
-    "editor.formatOnSave": true
-  },
-  "git.mergeEditor": true,
-  "window.commandCenter": true,
-  "gitlens.hovers.currentLine.over": "line",
+  "terminal.integrated.defaultProfile.windows": "fish",
   "terminal.integrated.profiles.osx": {
     "bash": {
-      "path": "bash",
       "args": ["-l"],
-      "icon": "terminal-bash"
-    },
-    "zsh": {
-      "path": "zsh",
-      "args": ["-l"]
+      "icon": "terminal-bash",
+      "path": "bash"
     },
     "fish": {
-      "path": "/opt/homebrew/bin/fish",
-      "args": ["-l"]
-    },
-    "tmux": {
-      "path": "tmux",
-      "icon": "terminal-tmux"
+      "args": ["-l"],
+      "path": "/opt/homebrew/bin/fish"
     },
     "pwsh": {
-      "path": "pwsh",
-      "icon": "terminal-powershell"
+      "icon": "terminal-powershell",
+      "path": "pwsh"
+    },
+    "tmux": {
+      "icon": "terminal-tmux",
+      "path": "tmux"
+    },
+    "zsh": {
+      "args": ["-l"],
+      "path": "zsh"
     }
   },
-  "terminal.integrated.defaultProfile.windows": "fish",
-  "typescript.preferences.useAliasesForRenames": false,
-  "javascript.preferences.useAliasesForRenames": false,
-  "workbench.preferredDarkColorTheme": "One Dark Pro Darker",
-  "oneDarkPro.bold": true,
-  "oneDarkPro.vivid": true,
-  "workbench.colorTheme": "One Dark Pro Darker",
-  "javascript.format.semicolons": "insert",
+  "terminal.integrated.scrollback": 100000,
+  "totalTypeScript.hiddenTips": [
+    "function-return-type",
+    "passing-generics-to-types",
+    "generic-slots-in-functions",
+    "basic-types",
+    "literal-type",
+    "type-alias-declaration",
+    "type-alias-with-generics",
+    "typing-function-parameters",
+    "variable-type-annotation",
+    "undefined-keyword",
+    "returntype-utility-type",
+    "any-type",
+    "in-operator-narrowing",
+    "typeof",
+    "type-alias-with-multiple-generics",
+    "parameters-utility-type",
+    "awaited-utility-type",
+    "keyof",
+    "record-utility-type",
+    "interface-with-generics"
+  ],
+  "totalTypeScript.hideAllTips": true,
+  "totalTypeScript.hideBasicTips": true,
   "typescript.format.semicolons": "insert",
-  "editor.inlineSuggest.enabled": true,
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "typescript.preferences.useAliasesForRenames": false,
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "window.commandCenter": true,
+  "window.title": "${activeEditorMedium}${separator}${rootName}",
+  "workbench.colorTheme": "One Dark Pro Darker",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.preferredDarkColorTheme": "One Dark Pro Darker",
   "yaml.format.singleQuote": true,
-  "editor.bracketPairColorization.enabled": true,
-  "editor.guides.bracketPairs":"active"
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[graphql]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "gitlens.graph.layout": "editor",
+  "githubPullRequests.pullBranch": "never",
+  "yaml.schemas": {
+    "file:///Users/rickyratnayake/.vscode/extensions/atlassian.atlascode-3.0.7/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+  },
+  "atlascode.jira.enabled": true,
+  "atlascode.bitbucket.enabled": false,
+  "atlascode.jira.jqlList": [
+    {
+      "id": "c34cfeba-2151-411b-a81f-4974c3cade9b",
+      "enabled": true,
+      "name": "My tshirtventures Issues",
+      "query": "assignee = currentUser() AND resolution = Unresolved ORDER BY lastViewed DESC",
+      "siteId": "0e34035a-cd31-44b0-8a67-b31f28b80d1e",
+      "monitor": true
+    }
+  ],
+  "atlascode.jira.hover.enabled": true,
+  "atlascode.jira.todoIssues.enabled": true,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "atlascode.jira.lastCreateSiteAndProject": {
+    "siteId": "0e34035a-cd31-44b0-8a67-b31f28b80d1e",
+    "projectKey": "HEYP"
+  },
+  "atlascode.jira.explorer.nestSubtasks": true,
+  "gitlens.hovers.avatarSize": 16,
+  "better-comments.highlightPlainText": true,
+  "cron-explained.cronstrueOptions.dayOfWeekStartIndexZero": false,
+  "telemetry.telemetryLevel": "off",
+  "cSpell.userWords": [
+    "ANZACATA",
+    "aren",
+    "AUTHD",
+    "Behaviour",
+    "behavioural",
+    "capitalise",
+    "checkly",
+    "cimg",
+    "Clearable",
+    "codecov",
+    "codecoverage",
+    "Colour",
+    "Convox",
+    "corepack",
+    "datamodel",
+    "DEVCYCLE",
+    "dockerhub",
+    "elif",
+    "Fastify",
+    "fontawesome",
+    "formik",
+    "fortawesome",
+    "fredbi",
+    "GMAPS",
+    "graphcache",
+    "heroicons",
+    "heyhubble",
+    "HEYP",
+    "HUBSPOT",
+    "initialise",
+    "keepalive",
+    "keyrings",
+    "keyserver",
+    "kubeconfig",
+    "lcov",
+    "listbox",
+    "Mercurius",
+    "mermerd",
+    "Mgmt",
+    "mockdate",
+    "mrkdwn",
+    "Ndis",
+    "neuro",
+    "Neurone",
+    "nextjs",
+    "NOTICKET",
+    "organisation",
+    "Organising",
+    "pagerduty",
+    "Parkinsons",
+    "postgis",
+    "PROCHO",
+    "providerchoice",
+    "psql",
+    "PTSD",
+    "REPONAME",
+    "Runbooks",
+    "specialise",
+    "Specialised",
+    "storytime",
+    "Swarmia",
+    "TAFE",
+    "teenagehood",
+    "themself",
+    "tshirt",
+    "tshirtventures",
+    "UNAUTH",
+    "UNAUTHD",
+    "UNAUTHORIZED",
+    "urql",
+    "webflow",
+    "wellbeing"
+  ],
+  "cSpell.language": "en-au",
+  "svg.preview.mode": "svg",
+  "explorer.confirmDragAndDrop": false,
+  "ltex.language": "en-AU",
+  "cSpell.usePnP": true,
+  "cSpell.ignorePaths": [
+    "package-lock.json",
+    "node_modules",
+    "vscode-extension",
+    ".git/objects",
+    ".vscode",
+    ".vscode-insiders",
+    ".circleci/**/*"
+  ],
+  "circleci.apiToken": "CCIPAT_2YNCzG2eSCKYwm1iUZDBcF_80c608b99885ebc090f105c3a3108dec3ea7b724",
+  "shellformat.effectLanguages": [
+    "shellscript",
+    "dockerfile",
+    "dotenv",
+    "hosts",
+    "ignore",
+    "gitignore",
+    "properties",
+    "spring-boot-properties",
+    "bats"
+  ],
+  "blocksort.enableCodeActions": false,
+  "blocksort.enableDocumentFormatting": false,
+  "blocksort.enableNaturalSorting": true
 }
