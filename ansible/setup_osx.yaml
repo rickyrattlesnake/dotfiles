@@ -1,0 +1,31 @@
+---
+- name: Install Macbook Packages
+  hosts: macbooks
+
+  tasks:
+    - name: Update homebrew
+      community.general.homebrew:
+        update_homebrew: true
+        upgrade_all: true
+    - name: Install shells
+      community.general.homebrew:
+        state: present
+        name:
+          - fish
+          - starship
+    - name: Install modern unix tools
+      community.general.homebrew:
+        state: present
+        name:
+          - bat
+          - broot
+          - btop
+          - exa
+          - fd
+          - fzf
+    - name: Install programming language tools
+      community.general.homebrew:
+        state: present
+        name:
+          - rustup
+          - volta
