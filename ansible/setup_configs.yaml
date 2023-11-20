@@ -3,17 +3,11 @@
   hosts: 127.0.0.1
   connection: local
   tasks:
-    # - name: Get uptime information
-    #   ansible.builtin.shell: /usr/bin/uptime
-    #   register: result
-    # - name: Print return information from the previous task
-    #   ansible.builtin.debug:
-    #     var: result
     - name: Update zprofile
       ansible.builtin.blockinfile:
         path: ~/.zprofile
         state: present
-        marker: "# {mark} ANSIBLE MANAGED BLOCK"
+        marker: '# {mark} ANSIBLE MANAGED BLOCK'
         block: |
           export PATH="$HOME/Library/Python/3.9/bin:/opt/homebrew/bin:$PATH"
           eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -24,17 +18,17 @@
     - name: Copy fish config
       ansible.builtin.copy:
         ## Copy contents recursively
-        src: "{{ playbook_dir }}/assets/fish/configs/"
+        src: '{{ playbook_dir }}/assets/fish/configs/'
         dest: ~/.config/fish
         mode: 'u+rw'
         directory_mode: 'u+rw'
     - name: Copy git config
       ansible.builtin.copy:
-        src: "{{ playbook_dir }}/assets/git/.gitconfig"
+        src: '{{ playbook_dir }}/assets/git/.gitconfig'
         dest: ~/.gitconfig
         mode: 'u+rwx'
     - name: Copy vscode settings
       ansible.builtin.copy:
-        src: "{{ playbook_dir }}/assets/vscode/settings.json"
-        dest: ~/Library/Application Support/Code/User/"
+        src: '{{ playbook_dir }}/assets/vscode/settings.json'
+        dest: ~/Library/Application Support/Code/User/settings.json
         mode: 'u+rwx'
