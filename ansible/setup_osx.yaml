@@ -1,12 +1,16 @@
 ---
 - name: Update and Install Macbook Packages
-  hosts: macbooks
+  hosts: 127.0.0.1
+  connection: local
   vars_prompt:
     - name: current_account_password
       prompt: What is your admin account password?
       private: true
 
   tasks:
+    - name: Tap homebrew fonts
+      community.general.homebrew_tap:
+        name: homebrew/cask-fonts
     - name: Update homebrew formulae
       community.general.homebrew:
         state: latest
@@ -31,8 +35,10 @@
           - btop
           - exa
           - fd
+          - fdupes
           - fzf
           - git
+          - gh
           - p7zip
           - rename
           - ripgrep
@@ -44,10 +50,11 @@
           - rustup-init
           - volta
           - tfenv
+          - shfmt
     - name: Install macosx utilities
       community.general.homebrew:
         name:
-          - dockutil
+          # - dockutil
           - m-cli
     - name: Install networking utilities
       community.general.homebrew:
@@ -90,3 +97,8 @@
           - vlc
           - wireshark
           - zoom
+          - font-fira-code-nerd-font
+          - font-fira-mono-nerd-font
+          - font-hack-nerd-font
+          - lens
+          - onyx
