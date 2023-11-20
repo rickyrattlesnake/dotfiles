@@ -19,3 +19,17 @@
           eval "$(/opt/homebrew/bin/brew shellenv)"
     - name: Run Fish Shell script
       ansible.builtin.script: ./scripts/setup_fish.fish
+    # - name: Run Macbook configuration script
+    #   ansible.builtin.script: ./scripts/setup_mac_configs.sh
+    - name: Copy fish config
+      ansible.builtin.copy:
+        ## Copy contents recursively
+        src: "{{ playbook_dir }}/assets/fish/configs/"
+        dest: ~/.config/fish
+        mode: 'u+rw'
+        directory_mode: 'u+rw'
+    - name: Copy git config
+      ansible.builtin.copy:
+        src: "{{ playbook_dir }}/assets/git/.gitconfig"
+        dest: ~/.gitconfig
+        mode: 'u+rwx'

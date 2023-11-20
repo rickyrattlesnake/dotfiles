@@ -16,6 +16,5 @@ set -l all_dns_servers $cloudflare_ipv4 $cloudflare_ipv4_alt $cloudflare_ipv6 $c
 echo $all_dns_servers | xargs networksetup -setdnsservers Wi-Fi
 # broken need to unroll the list before passing
 
-
 #reset dns resolver
 sudo killall -HUP mDNSResponder

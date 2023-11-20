@@ -1,6 +1,7 @@
 ---
 - name: Update and Install Macbook Packages
-  hosts: macbooks
+  hosts: 127.0.0.1
+  connection: local
   vars_prompt:
     - name: current_account_password
       prompt: What is your admin account password?
@@ -53,7 +54,7 @@
     - name: Install macosx utilities
       community.general.homebrew:
         name:
-          - dockutil
+          # - dockutil
           - m-cli
     - name: Install networking utilities
       community.general.homebrew:

@@ -1,0 +1,91 @@
+[advice]
+  statusHints = false
+  pushNonFastForward = false
+[alias]
+  # Add, Commit, Push (forcefully): pass in a commit message as the first argument.
+  acp = "!f() { git add -A && git commit -m \"wip:${1-wip}\" && git push --force-with-lease; }; f"
+  aliases = config --get-regexp alias
+  b = rev-parse --abbrev-ref HEAD
+  br = branch -av
+  co = checkout
+  # Switch to a branch, creating it if necessary
+	go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
+  dd = difftool --dir-diff --cached
+  delete-branches = "!f() { git branch | grep -vE \"(master|main|develop|uat)\" | xargs git branch -D ; }; f"
+  delete-remote-branch = "!f() { git push origin \":$1\"; git branch -D \"$1\"; }; f"
+  # Show the diff between the latest commit and the current state
+	d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
+  fa = fetch --all -p
+  files = "!f() { git diff --name-status \"$1^\" \"$1\"; }; f"
+  lf = log -u
+  ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+  ls = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+  pf = push --force-with-lease
+  pl = pull
+  po = "!f() { git push -u origin $(git rev-parse --abbrev-ref HEAD); }; f"
+  rba = rebase --abort
+  rbc = rebase --continue
+  # Interactive rebase with the given number of latest commits
+  rbn = "!r() { git rebase -i HEAD~$1; }; r"
+  rbi = rebase -i
+  # Interactive rebase with origin/master
+  rbi-main = "!git fetch --all -p && git rebase -i origin/main"
+  rbi-master = "!git fetch --all -p && git rebase -i origin/master"
+  rbi-develop = "!git fetch --all -p && git rebase -i origin/develop"
+  s = status -s
+  stp = stash pop
+  sts = stash save
+[branch]
+  autosetupmerge = false
+  autosetuprebase = "always"
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  interactive = true
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold # line info
+	old = red # deletions
+	new = green # additions
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+[commit]
+  # gpgsign = true
+[core]
+  symlinks = false
+  autocrlf = input
+  fscache = true
+[diff]
+	# Detect copies as well as renames
+	renames = copies
+[diff "bin"]
+	# Use `hexdump` to diff binary files
+	textconv = hexdump -v -C
+[help]
+  format = html
+  # Automatically correct and execute mistyped commands
+	autocorrect = 1
+[pull]
+  rebase = true
+[push]
+  default = upstream
+  # Make `git push` push relevant annotated tags when pushing branches out.
+	followTags = true
+[url "ssh://git@github.com/"]
+  insteadOf = https://github.com/
+[user]
+  email = ricky.ratnayake@gmail.com
+  name = rickyrattlesnake
+[credential]
+	helper = cache --timeout 3600
+[credentials]
+	helper = osxkeychain
+[init]
+  defaultBranch = main
