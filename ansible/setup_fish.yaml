@@ -1,0 +1,21 @@
+---
+- name: Setup Shells
+  hosts: 127.0.0.1
+  connection: local
+  tasks:
+    # - name: Get uptime information
+    #   ansible.builtin.shell: /usr/bin/uptime
+    #   register: result
+    # - name: Print return information from the previous task
+    #   ansible.builtin.debug:
+    #     var: result
+    - name: Update zprofile
+      ansible.builtin.blockinfile:
+        path: ~/.zprofile
+        state: present
+        marker: "# {mark} ANSIBLE MANAGED BLOCK"
+        block: |
+          export PATH="$HOME/Library/Python/3.9/bin:/opt/homebrew/bin:$PATH"
+          eval "$(/opt/homebrew/bin/brew shellenv)"
+    - name: Run Fish Shell script
+      ansible.builtin.script: ./scripts/setup_fish.fish

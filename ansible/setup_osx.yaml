@@ -1,21 +1,30 @@
 ---
-- name: Install Macbook Packages
+- name: Update and Install Macbook Packages
   hosts: macbooks
+  vars_prompt:
+    - name: current_account_password
+      prompt: What is your admin account password?
+      private: true
 
   tasks:
-    - name: Update homebrew
+    - name: Update homebrew formulae
       community.general.homebrew:
+        state: latest
         update_homebrew: true
+        upgrade_all: true
+    - name: Upgrade all casks
+      community.general.homebrew_cask:
+        state: latest
+        greedy: true
         upgrade_all: true
     - name: Install shells
       community.general.homebrew:
-        state: present
         name:
           - fish
+          - fisher
           - starship
-    - name: Install modern unix tools
+    - name: Install essential workflow tools
       community.general.homebrew:
-        state: present
         name:
           - bat
           - broot
@@ -23,9 +32,61 @@
           - exa
           - fd
           - fzf
+          - git
+          - p7zip
+          - rename
+          - ripgrep
+          - shellcheck
+          - yq
     - name: Install programming language tools
       community.general.homebrew:
-        state: present
         name:
-          - rustup
+          - rustup-init
           - volta
+          - tfenv
+    - name: Install macosx utilities
+      community.general.homebrew:
+        name:
+          - dockutil
+          - m-cli
+    - name: Install networking utilities
+      community.general.homebrew:
+        name:
+          - httpie
+          - nmap
+    - name: Install tech stack utilities
+      community.general.homebrew:
+        name:
+          - awscli
+          - kubernetes-cli
+          - stern
+    - name: Install other utilities
+      community.general.homebrew:
+        name:
+          - ffmpeg
+    - name: Install GUI applications
+      community.general.homebrew_cask:
+        sudo_password: "{{ current_account_password }}"
+        name:
+          - 1password
+          - alfred
+          - aws-vpn-client
+          - calibre
+          - docker
+          - firefox
+          - google-chrome
+          - gpg-suite
+          - intellij-idea
+          - iterm2
+          - kap
+          - keka
+          - kekaexternalhelper
+          - lulu
+          - slack
+          - spotify
+          - todoist
+          - transmission
+          - visual-studio-code
+          - vlc
+          - wireshark
+          - zoom
