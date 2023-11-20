@@ -33,3 +33,8 @@
         src: "{{ playbook_dir }}/assets/git/.gitconfig"
         dest: ~/.gitconfig
         mode: 'u+rwx'
+    - name: Copy vscode settings
+      ansible.builtin.copy:
+        src: "{{ playbook_dir }}/assets/vscode/settings.json"
+        dest: ~/Library/Application Support/Code/User/"
+        mode: 'u+rwx'
