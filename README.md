@@ -7,6 +7,9 @@ This document covers that, at least in terms of setting up a brand new Mac out o
 - Update fonts Iterm profile
 - Update username in config files
 - Setup VScode again
+- Export path didn’t work
+- Existing apps https://github.com/ansible-collections/community.general/issues/864
+
 
 ## Initial configuration of a brand new Mac
 
