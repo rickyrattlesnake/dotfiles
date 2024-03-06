@@ -33,12 +33,12 @@
           - bat
           - broot
           - btop
-          - exa
           - fd
           - fdupes
           - fzf
           - git
           - gh
+          - lsd
           - p7zip
           - rename
           - ripgrep
@@ -54,7 +54,7 @@
     - name: Install macosx utilities
       community.general.homebrew:
         name:
-          # - dockutil
+          - dockutil
           - m-cli
     - name: Install networking utilities
       community.general.homebrew:
@@ -73,7 +73,7 @@
           - ffmpeg
     - name: Install GUI applications
       community.general.homebrew_cask:
-        sudo_password: "{{ current_account_password }}"
+        sudo_password: '{{ current_account_password }}'
         name:
           - 1password
           - alfred
