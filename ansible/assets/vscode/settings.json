@@ -191,6 +191,30 @@
     }
   },
   "terminal.integrated.scrollback": 100000,
+  "totalTypeScript.hiddenTips": [
+    "function-return-type",
+    "passing-generics-to-types",
+    "generic-slots-in-functions",
+    "basic-types",
+    "literal-type",
+    "type-alias-declaration",
+    "type-alias-with-generics",
+    "typing-function-parameters",
+    "variable-type-annotation",
+    "undefined-keyword",
+    "returntype-utility-type",
+    "any-type",
+    "in-operator-narrowing",
+    "typeof",
+    "type-alias-with-multiple-generics",
+    "parameters-utility-type",
+    "awaited-utility-type",
+    "keyof",
+    "record-utility-type",
+    "interface-with-generics"
+  ],
+  "totalTypeScript.hideAllTips": true,
+  "totalTypeScript.hideBasicTips": true,
   "typescript.format.semicolons": "insert",
   "typescript.preferences.importModuleSpecifier": "relative",
   "typescript.preferences.useAliasesForRenames": false,
@@ -214,7 +238,7 @@
   "gitlens.graph.layout": "editor",
   "githubPullRequests.pullBranch": "never",
   "yaml.schemas": {
-    "file:///Users/rickyrattlesnake/.vscode/extensions/atlassian.atlascode-3.0.7/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+    "file:///Users/rickyratnayake/.vscode/extensions/atlassian.atlascode-3.0.7/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
   },
   "atlascode.jira.enabled": true,
   "atlascode.bitbucket.enabled": false,
@@ -342,5 +366,8 @@
   ],
   "blocksort.enableCodeActions": false,
   "blocksort.enableDocumentFormatting": false,
-  "blocksort.enableNaturalSorting": true
+  "blocksort.enableNaturalSorting": true,
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer"
+  }
 }
