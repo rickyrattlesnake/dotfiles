@@ -67,6 +67,7 @@
           - awscli
           - kubernetes-cli
           - stern
+          - aws-es-proxy
     - name: Install other utilities
       community.general.homebrew:
         name:

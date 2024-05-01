@@ -1,5 +1,108 @@
 {
-  "[NGINX]": {},
+  "yaml.schemas": {
+    "file:///Users/rickyratnayake/.vscode/extensions/atlassian.atlascode-3.0.10/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml",
+    "file:///Users/rickyratnayake/.vscode/extensions/atlassian.atlascode-3.0.7/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+  },
+  "workbench.colorTheme": ["Atom One Dark", "One Dark Pro Darker"],
+  "cSpell.userWords": [
+    "capitalised",
+    "organisation",
+    "RTPM",
+    "ANZACATA",
+    "aren",
+    "AUTHD",
+    "Behaviour",
+    "behavioural",
+    "capitalise",
+    "checkly",
+    "cimg",
+    "Clearable",
+    "codecov",
+    "codecoverage",
+    "Colour",
+    "Convox",
+    "corepack",
+    "datamodel",
+    "DEVCYCLE",
+    "dockerhub",
+    "elif",
+    "Fastify",
+    "fontawesome",
+    "formik",
+    "fortawesome",
+    "fredbi",
+    "GMAPS",
+    "graphcache",
+    "heroicons",
+    "heyhubble",
+    "HEYP",
+    "HUBSPOT",
+    "initialise",
+    "keepalive",
+    "keyrings",
+    "keyserver",
+    "kubeconfig",
+    "lcov",
+    "listbox",
+    "Mercurius",
+    "mermerd",
+    "Mgmt",
+    "mockdate",
+    "mrkdwn",
+    "Ndis",
+    "neuro",
+    "Neurone",
+    "nextjs",
+    "NOTICKET",
+    "organisation",
+    "Organising",
+    "pagerduty",
+    "Parkinsons",
+    "postgis",
+    "PROCHO",
+    "providerchoice",
+    "psql",
+    "PTSD",
+    "REPONAME",
+    "Runbooks",
+    "specialise",
+    "Specialised",
+    "storytime",
+    "Swarmia",
+    "TAFE",
+    "teenagehood",
+    "themself",
+    "tshirt",
+    "tshirtventures",
+    "UNAUTH",
+    "UNAUTHD",
+    "UNAUTHORIZED",
+    "urql",
+    "webflow",
+    "wellbeing"
+  ],
+  "[handlebars]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "editor.formatOnPaste": [false, true],
+  "editor.formatOnSave": [false, true],
+  "editor.formatOnType": [false, true],
+  "[javascript]": {
+    "editor.defaultFormatter": [
+      "esbenp.prettier-vscode",
+      "esbenp.prettier-vscode"
+    ]
+  },
+  "editor.fontLigatures": [true, true],
+  "editor.fontFamily": [
+    "DankMono-Regular, Menlo, Monaco, 'Courier New', monospace",
+    "Dank Mono, FiraCode Nerd Font, Fira Code, Menlo, Monaco, 'Courier New', monospace"
+  ],
+  "workbench.editor.pinnedTabsOnSeparateRow": true,
+  "editor.fontSize": [14, 14],
+  "html.format.templating": true,
+  "html.format.indentHandlebars": true,
+  "[NGINX]": [],
   "[dockerfile]": {
     "editor.defaultFormatter": "ms-azuretools.vscode-docker",
     "editor.formatOnSave": false
@@ -8,15 +111,8 @@
     "editor.defaultFormatter": "foxundermoon.shell-format",
     "editor.formatOnSave": false
   },
-  "[ignore]": {
-    "editor.defaultFormatter": "foxundermoon.shell-format"
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
+  "[ignore]": { "editor.defaultFormatter": "foxundermoon.shell-format" },
+  "[json]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
   "[makefile]": {
     "editor.insertSpaces": false,
     "editor.renderWhitespace": "boundary",
@@ -30,16 +126,12 @@
     "editor.defaultFormatter": "foxundermoon.shell-format",
     "editor.formatOnSave": false
   },
-  "[sql]": {
-    "editor.defaultFormatter": "adpyke.vscode-sql-formatter"
-  },
+  "[sql]": { "editor.defaultFormatter": "adpyke.vscode-sql-formatter" },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
+  "[typescriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml",
     "editor.formatOnSave": true,
@@ -49,12 +141,6 @@
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.bracketPairColorization.enabled": true,
   "editor.detectIndentation": false,
-  "editor.fontFamily": "Dank Mono, FiraCode Nerd Font, Fira Code, Menlo, Monaco, 'Courier New', monospace",
-  "editor.fontLigatures": true,
-  "editor.fontSize": 14,
-  "editor.formatOnPaste": true,
-  "editor.formatOnSave": true,
-  "editor.formatOnType": true,
   "editor.guides.bracketPairs": "active",
   "editor.inlineSuggest.enabled": true,
   "editor.minimap.enabled": false,
@@ -66,9 +152,7 @@
   "emmet.syntaxProfiles": {
     "javascript": "jsx",
     "typescript": "tsx",
-    "xml": {
-      "attr_quotes": "single"
-    }
+    "xml": { "attr_quotes": "single" }
   },
   "files.associations": {
     "*.cpt": "gauge",
@@ -79,9 +163,7 @@
     "Makefile.*": "makefile",
     "*.md": "markdown"
   },
-  "files.exclude": {
-    "**/coverage": true
-  },
+  "files.exclude": { "**/coverage": true },
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
@@ -162,33 +244,15 @@
   "playwright.reuseBrowser": true,
   "scss.lint.argumentsInColorFunction": "ignore",
   "scss.lint.hexColorLength": "ignore",
-  "search.exclude": {
-    "**/*.code-search": false
-  },
+  "search.exclude": { "**/*.code-search": false },
   "security.workspace.trust.untrustedFiles": "open",
   "terminal.integrated.defaultProfile.windows": "fish",
   "terminal.integrated.profiles.osx": {
-    "bash": {
-      "args": ["-l"],
-      "icon": "terminal-bash",
-      "path": "bash"
-    },
-    "fish": {
-      "args": ["-l"],
-      "path": "/opt/homebrew/bin/fish"
-    },
-    "pwsh": {
-      "icon": "terminal-powershell",
-      "path": "pwsh"
-    },
-    "tmux": {
-      "icon": "terminal-tmux",
-      "path": "tmux"
-    },
-    "zsh": {
-      "args": ["-l"],
-      "path": "zsh"
-    }
+    "bash": { "args": ["-l"], "icon": "terminal-bash", "path": "bash" },
+    "fish": { "args": ["-l"], "path": "/opt/homebrew/bin/fish" },
+    "pwsh": { "icon": "terminal-powershell", "path": "pwsh" },
+    "tmux": { "icon": "terminal-tmux", "path": "tmux" },
+    "zsh": { "args": ["-l"], "path": "zsh" }
   },
   "terminal.integrated.scrollback": 100000,
   "totalTypeScript.hiddenTips": [
@@ -222,24 +286,14 @@
   "typescript.updateImportsOnFileMove.enabled": "always",
   "window.commandCenter": true,
   "window.title": "${activeEditorMedium}${separator}${rootName}",
-  "workbench.colorTheme": "One Dark Pro Darker",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.preferredDarkColorTheme": "One Dark Pro Darker",
   "yaml.format.singleQuote": true,
-  "[markdown]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[graphql]": {
-    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
+  "[markdown]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[graphql]": { "editor.defaultFormatter": "rvest.vs-code-prettier-eslint" },
+  "[jsonc]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
   "gitlens.graph.layout": "editor",
   "githubPullRequests.pullBranch": "never",
-  "yaml.schemas": {
-    "file:///Users/rickyratnayake/.vscode/extensions/atlassian.atlascode-3.0.7/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
-  },
   "atlascode.jira.enabled": true,
   "atlascode.bitbucket.enabled": false,
   "atlascode.jira.jqlList": [
@@ -264,80 +318,6 @@
   "better-comments.highlightPlainText": true,
   "cron-explained.cronstrueOptions.dayOfWeekStartIndexZero": false,
   "telemetry.telemetryLevel": "off",
-  "cSpell.userWords": [
-    "ANZACATA",
-    "aren",
-    "AUTHD",
-    "Behaviour",
-    "behavioural",
-    "capitalise",
-    "checkly",
-    "cimg",
-    "Clearable",
-    "codecov",
-    "codecoverage",
-    "Colour",
-    "Convox",
-    "corepack",
-    "datamodel",
-    "DEVCYCLE",
-    "dockerhub",
-    "elif",
-    "Fastify",
-    "fontawesome",
-    "formik",
-    "fortawesome",
-    "fredbi",
-    "GMAPS",
-    "graphcache",
-    "heroicons",
-    "heyhubble",
-    "HEYP",
-    "HUBSPOT",
-    "initialise",
-    "keepalive",
-    "keyrings",
-    "keyserver",
-    "kubeconfig",
-    "lcov",
-    "listbox",
-    "Mercurius",
-    "mermerd",
-    "Mgmt",
-    "mockdate",
-    "mrkdwn",
-    "Ndis",
-    "neuro",
-    "Neurone",
-    "nextjs",
-    "NOTICKET",
-    "organisation",
-    "Organising",
-    "pagerduty",
-    "Parkinsons",
-    "postgis",
-    "PROCHO",
-    "providerchoice",
-    "psql",
-    "PTSD",
-    "REPONAME",
-    "Runbooks",
-    "specialise",
-    "Specialised",
-    "storytime",
-    "Swarmia",
-    "TAFE",
-    "teenagehood",
-    "themself",
-    "tshirt",
-    "tshirtventures",
-    "UNAUTH",
-    "UNAUTHD",
-    "UNAUTHORIZED",
-    "urql",
-    "webflow",
-    "wellbeing"
-  ],
   "cSpell.language": "en-au",
   "svg.preview.mode": "svg",
   "explorer.confirmDragAndDrop": false,
@@ -367,7 +347,5 @@
   "blocksort.enableCodeActions": false,
   "blocksort.enableDocumentFormatting": false,
   "blocksort.enableNaturalSorting": true,
-  "[rust]": {
-    "editor.defaultFormatter": "rust-lang.rust-analyzer"
-  }
+  "[rust]": { "editor.defaultFormatter": "rust-lang.rust-analyzer" }
 }
